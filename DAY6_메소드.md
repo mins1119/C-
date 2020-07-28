@@ -83,9 +83,11 @@ static void Main(string[] args)
 
 Swap 메소드를 통해 값을 교환했음에도 서로의 값이 바뀌지 않았다.  
 
-메소드가 매개변수를 받아들일때에는 데이터의 '복사'가 이루어진다. 즉,  Swap()의 첫번째매개 변수 a는 x가 담고있는 3을 복사해서 받고, 두번재 매개변수b는 y가 담고 있는 4를 복사해서 받는다. 이처럼 메소드를 호출할 때 데잍를 복사해서 매개변수에 넘기는 것을 "값에 의한 전달 (pass by value) "라고 한다.
+메소드가 매개변수를 받아들일때에는 데이터의 '복사'가 이루어진다. 즉,  Swap()의 첫번째매개 변수 a는 x가 담고있는 3을 복사해서 받고, 두번재 매개변수b는 y가 담고 있는 4를 복사해서 받는다. 이처럼 메소드를 호출할 때 데이터를 복사해서 매개변수에 넘기는 것을 "값에 의한 전달 (pass by value) "라고 한다.
 
 ![스크린샷(20)](https://user-images.githubusercontent.com/40557177/88514343-e0f87200-d024-11ea-8b9e-666b68ca6bf8.png)
+
+a는 x가 갖고있는 것과 똑같은 데이터를 갖고있지만, a와x는 완전히 별개의 메모리 공간을 사용한다.  다라서 a를 수정한다고 해도 x는 아무런 영향을 받지 않는다.
 
 #### 참조에 의한 전달 ( Pass by reference )
 
@@ -116,6 +118,12 @@ static void Main(string[] args)
 
 
 #### 참조 반환값 ( ref return )
+
+메소드의 결과를 참조로 반환한다. 반환받은 결과를 참조로 다룰 수 있다.
+
+ref 한정자를 이용하여 메소드를 선언하고, return문이 반환하는 변수 앞에도 ref키워드를 명시한다.
+
+참조를 반환하도록 구현해도 결과를 받는 지역변수와 호출 할 메소드 앞에 ref를 붙이지 않으면 평범한 메소드로 동작한다. 참조로 반환받은 결과를 담는 지역변수를 참조지역변수 ( ref local ) 이라 한다.
 
 ```c#
 class Product
@@ -152,7 +160,7 @@ class Program
 }
 ```
 
-참조로 반환받은 결과를 담는 지역변수를 참조지역변수 ( ref local ) 이라 한다.
+
 
 #### 출력 전용 매개 변수
 
@@ -174,7 +182,7 @@ static void Main(string[] args)
 
 out 키워드를 이용한다. 
 
-ref 키워드를 이용해서 ㅁ매개변수를 넘기는 경우에는 메소드가 해당 매개 변수에 결과를 저장하지 않아도 컴파일러는 아무런 경고를 하지 않는다. 
+ref 키워드를 이용해서 매개변수를 넘기는 경우에는 메소드가 해당 매개 변수에 결과를 저장하지 않아도 컴파일러는 아무런 경고를 하지 않는다. 
 
 out 키워드를 이용해서 매개 변수를 넘길 때는 메소드가 해당 변수에 결과를 저장하지 않으면 컴파일러가 에러 메세지를 출력한다. 또한 컴파일러가 호출당하는 메소드에서 지역변수를 할당할 것을 보장하기 때문에, 호출하는 쪽에서 초기화를 하지 않은 지역변수를 넘기는 것도 가능하다. 
 
@@ -272,6 +280,8 @@ Name: 박세리, Phone: 010-111-1515
 
 기본값을 가지는 매개 변수는 필요에 따라 데이터를 할당하거나 할당하지 않을 수 있다.
 
+메소드 오버로딩과 함께 사용할 수 없다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+
 ```c#
 static void PrintProfile(string name, string phone = "")
 {
@@ -289,7 +299,32 @@ Name:Anne,Phone:010-222-2222
 Name:yuri,Phone:*/
 ```
 
-로컬 함수 ( Local Function )
+#### 로컬 함수 ( Local Function )
 
-로컬함수는 메소드 안에서 선언되고, 선언된 메소드안에서만 사용되는 특별한 함수이다. 클래스이 멤버가 아니기 때문에 메소드가 아니라 함수라고 부른다. 선언방법은 메소드와 다르지 않지만, 로컬함수는 자신이 존재하는 지역에 선언되어 있는 변수를 사용할 수 있다.
+로컬함수는 메소드 안에서 선언되고, 선언된 메소드안에서만 사용되는 특별한 함수이다. 클래스이 멤버가 아니기 때문에 메소드가 아니라 함수라고 부른다. 선언방법은 메소드와 다르지 않지만, 로컬함수는 자신이 존재하는 지역에 선언되어 있는 변수를 사용할 수 있다. 메소드 밖에서는 다시 쓸 일없는 반복적인 작업을 하나의 이름 아래 묶어 놓는데 사용한다.
+
+```c#
+static string ToLower( string input)
+{
+    var arr = input.ToCharArray();
+    for(int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = ToLowerChar(i);
+    }
+    char ToLowerChar(int i)
+    {
+        if (arr[i] < 65 || arr[i] > 90)
+            return arr[i];
+        else
+            return (char)(arr[i] + 32);
+    }
+    return new string(arr);
+}
+static void Main(string[] args)
+{
+    Console.WriteLine(ToLower("HELLO"));
+    Console.WriteLine(ToLower("Good Mormning"));
+    Console.WriteLine(ToLower("This is a Pen"));
+}
+```
 
