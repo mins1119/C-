@@ -1,4 +1,4 @@
-# DAY7												20.07.28
+# DAY7 - 8											20.07.28 - 29
 
 ## 클래스
 
@@ -6,7 +6,7 @@
 
  코드 내의 모든 것을 객체로 표현하고자 하는 프로그래밍 패러다임
 
-객체는 데이터와 메소드로 이루어진다.
+객체는 데이터 (= 속성)와 메소드(= 기능)로 이루어진다.
 
 ```c#
 int a = 30;
@@ -676,4 +676,315 @@ Micro-Rocket
 ### 메소드 숨기기 ( Method Hiding )
 
 CLR에게 기반 클래스에서 구현된 버전의 메소드를 감추고 파생클래스에서 구현된 버전만을 보여주는 것을 말한다.메소드 숨기기는 파생클래스 버전의 메소드를 new한정자로 수식함으로서 할 수 있다.
+
+```c#
+class Base
+{
+    public void MyMethod()
+    {
+        Console.WriteLine("Base.MyMethod()");
+    }
+}
+class Derived : Base
+{
+    public new void MyMethod()
+    {
+        Console.WriteLine("Derived.MyMethod()");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Base baseobj = new Base();
+        baseobj.MyMethod();			//Base.MyMethod()
+
+        Derived derivedobj = new Derived();
+        derivedobj.MyMethod();		//Derived.MyMethod()
+
+        Base baseOrDerived = new Derived();
+        baseOrDerived.MyMethod();	//Base.MyMethod()
+    }
+}
+```
+
+메소드를 숨기지만 노출시킬수도 있다. 메소드 숨기기는 완전한 다형성을 표현하기는 어렵기 때문에 오버라이딩을 사용한다.
+
+### 오버라이딩 봉인
+
+메소드도 오버라이딩이 되지 않도록 봉인할 수 있다. virtual 로 선언된 가상 메소드를 오버라이딩한 버전의 메소드만이 가능하다.
+
+```c#
+class Base
+{
+    public virtual void SealMe()
+    {
+    }
+}
+class Derived : Base
+{
+    public sealed override void SealMe()
+    {
+    }
+}
+class WantToOverride : Derived
+{
+    public override void SealMe()
+    {
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+
+    }
+}
+/*
+심각도	코드	설명	프로젝트	파일	줄	비표시 오류(Suppression) 상태
+오류	CS0239	'WantToOverride.SealMe()': 상속된 'Derived.SealMe()' 멤버는 봉인되어 있으므로 재정의할 수 없습니다.	day8	C:\Users\User\Desktop\mskang\day8\day8\Program.cs	19	활성
+*/
+```
+
+봉인 메소드는 파생클래스 작성자를 위한 기반클래스 작성자의 배려이다. 파생클래스의 작성자가 기반클래스로부터 메소드 하나를 오버라이딩하고 이 때문에 다른 부분들이 오작동한다면 파생클래스의 작성자는 자신의 코드만으로는 오류의 원인을 알 수 없기 때문이다.
+
+오작동을 할 위험이 있거나, 잘못 오버라이딩함으로써 발생할 수 있는 문제가 예상된다며느 상속을 사전에 막는 것이 낫다.
+
+virtual로 선언한다는 것은 해당 메소드를 오버라이딩 할수 있도록 준비를 해놨다는 의미이므로 이 단계에서는 봉인의 의미가 없다. 오버라이딩을 원치 않는다면 virtual한정자를 붙이지 않으면 되기 때문이다. 
+
+오버라이딩한 메소드는 파생클래스의 파생클래스에도 자동으로 오버라이딩이 가능하다. 그래서 오버라이딩을 막을 수 있는 브레이크인 sealed 한정자가 필요하다.
+
+### 중첩클래스 ( Nested Class )
+
+ 클래스안에 클래스를 선언하면 된다. 중첨 클래스는 자신이 소속되어 있는 클래스의 private 멤버0에도 자유롭게 접근할 수 있다.
+
+-  클래스 외부에 공개하고 싶지 않은 형식을 만들고자 할 때
+- 현재의 클래스의 일부분처럼 표현할 수 있는 클래스를 만들고자 할 때
+
+사용한다. private 멤보에게도 마음대로 접근할 수 있다는 점이 은닉성을 무너뜨리지만, 유연한 표현이 가능하다는 장점이 있다.
+
+```C#
+class Configuration
+{
+    List<ItemValue> listConfig = new List<ItemValue>();
+
+    public void SetConfig(string item, string value)
+    {
+        ItemValue iv = new ItemValue();
+        iv.SetValue(this, item, value);
+    }
+    public string GetConfig(string item)
+    {
+        foreach(ItemValue iv in listConfig)
+        {
+            if (iv.GetItem() == item)
+                return iv.GetValue();
+        }
+        return "";
+    }
+    private class ItemValue
+        //Configuration 안에 선언된 중첩클래스. Private로 선언했기때문에 Configuration클래스 밖에서는 보이지 않는다.
+    {
+        private string item;
+        private string value;
+
+        public void SetValue(Configuration config, string item, string value)
+        {
+            this.item = item;
+            this.value = value;
+            bool found = false;
+            for (int i = 0; i < config.listConfig.Count; i++)
+            {
+                if (config.listConfig[i].item == item)
+                {
+                    config.listConfig[i] = this;
+                    found = true;
+                    break;
+                }
+            }
+            if (found == false)
+                config.listConfig.Add(this);
+        }
+        public string GetItem() { return item; }
+        public string GetValue() { return value;  }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Configuration config = new Configuration();
+        config.SetConfig("Version","v 5.0");
+        config.SetConfig("Size", "655KB");
+
+        Console.WriteLine(config.GetConfig("Version"));	//v 5.0
+        Console.WriteLine(config.GetConfig("Size"));	//655KB
+
+        config.SetConfig("Version", "V5.0.1");
+        Console.WriteLine(config.GetConfig("Version"));	//V5.0.1
+    }
+}
+```
+
+### 분할 클래스 ( Partial Class )
+
+여러 번에 나눠서 구현하는 클래스
+
+클래스의 구현이 길어질 경우 여러 파일에 나눠서 구현할 수 있게 함으로써 소스코드 관리의 편의를 제공한다.
+
+```c#
+partial class MyClass
+{
+    public void Method1()
+    {
+        Console.WriteLine("Method1");
+    }
+    public void Method2()
+    {
+        Console.WriteLine("Method2");
+    }
+}
+partial class MyClass
+{
+    public void Method3()
+    {
+        Console.WriteLine("Method3");
+    }
+    public void Method4()
+    {
+        Console.WriteLine("Method4");
+    }
+}
+
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        MyClass obj = new MyClass();
+        obj.Method1();		//Method1
+        obj.Method2();		//Method2
+        obj.Method3();		//Method3
+        obj.Method4();		//Method4
+    }
+}
+```
+
+### 확장 메소드 ( Extension Method ) 
+
+""기존 클래스""의 기능을 확장한다. 메소드를 선언하되, static 한정자로 수식해야한다. 첫번째 매개변수는 반드시 this키워드와 함께 확장하고자 하는 클래스(형식)의 인스턴스여야 한다. 그 뒤에 따라오는 매개 변수 목록이 실제로 확장메소드를 호출할 때 입력되는 매개변수이다. 
+
+메소드는 클래스 없이 선언될 수 없기 때문에 static 한정자로 수식한 클래스를 선언하고 그 안에 확장 메소드를 선언한다.
+
+```c#
+public static class IntegerExtension
+{
+    public static int Square(this int myInt)
+    {
+        return myInt * myInt;
+    }
+    public static int Power(this int myInt, int exponent)
+    {
+        int result = myInt;
+        for(int i = 1; i < exponent; i++)
+            result = result * myInt;
+        return result;
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine($"3^2 : {3.Square()}");		//3^2 : 9
+        Console.WriteLine($"3^4 : {3.Power(4)}");		//3^4 : 81
+        Console.WriteLine($"2^10 : {2.Power(10)}");		//2^10 : 1024
+    }
+}
+```
+
+### 구조체 ( Structure )
+
+문법적으로 구조체와 클래스와 유사하다. 클래스가 실세계의 객체를 추상화하려는데 사용한다면, 구조체는 데이터를 담기위한 자료 구조로 사용된다.  따라서 은닉성을 비롯한 객체 지향의 원칙을 구조체에는 강하게 적용하지 않으며, 편의를 위해 public으로 선언하는 경우가 많다.
+
+| 특징          | 클래스                         | 구조체                                                       |
+| ------------- | ------------------------------ | ------------------------------------------------------------ |
+| 키워드        | class                          | struct                                                       |
+| 형식          | 참조 형식                      | 값형식                                                       |
+| 복사          | 얕은 복사 (Shallow Copy)       | 깉은 복사 ( Deep Copy )                                      |
+| 인스턴스 생성 | new연산자와 생성자 필요        | 선언만으로 생성                                              |
+| 생성자        | 매개변수 없는 생성자 선언 가능 | 매개변수 없는 생성자 선언 불가능                             |
+| 상속          | 가능                           | 모든 구조체는 System.Object 형식을 상속하는 System.ValueType으로부터 직접 상속받음 |
+
+클래스는 참조형식이고 구조체는 값형식이라는 것이 가장 큰 차이점이다. 구조테의 인스턴스는 스택에 할당되고 인스턴스가 선언된 블록이 끝나는 지점의 메모리에서 사라진다. 인스턴스의 사용이 끝나면 즉시 메모리에서 제거된다는 점에서 클래스에 비해 성능의 이점을 가진다.
+
+구조체는 값형식이기 때문에 할당연산자 = 를 통해 모든 필드의 복사가 이루어진다.
+
+### 튜플 ( Tuple )
+
+여러필드를 담을 수 있는 구조. 형식의 이름을 가지지 않는다. 응용프르램전체에서 사용할 형식을 선언할 때가 아닌, 임시적으로 사용할 복합데이터 형식을 선언핳 때 사용한다.튜플은 구조체 이므로 값형식이다.
+
+```C#
+var tuple = (123, 789);
+//컴파일러가 튜플의 모양을 보고 직접 형식을 결정하도록 var을 이용하여 선언한다.
+//튜플은 괄호사이에 두 개 이상의 필드를 지정함으로써 만들어진다.
+```
+
+위와 같이 필드의 이름을 지정하지 않는 튜플을 일컬어 "명명되지 않은 튜플"이라고 한다.
+
+```c#
+var tuple = (123. 789);
+Console.WriteLine(${tuple.Item1}, {tuple.Item2});	//123, 789
+```
+
+필드의 이름을 지정할 수 있는 명명된 튜플(Named Tuple)
+
+```c#
+var tuple = (Name:"Alice" , Age : 10);
+Console.WriteLine($"{tuple.Name}, {tuple.Age}");
+```
+
+튜플 분해
+
+```C#
+var tuple = (Name:"Alice" , Age : 10);
+var (name, age) = tuple;
+Console.WriteLine($"{name},{age}");
+
+var (name,_) = tuple;	//Age필드는 무시
+Console.WriteLine($"{name}");
+```
+
+튜플 할당
+
+```c#
+var unnamed = ("optimus","2020");			//string, int
+var named = (Name:"bumblebee",Age : 2018);	//string, int
+
+named = unnamed;
+Console.WriteLine($"{named.Name},{named.Age}");
+```
+
+```c#
+static void Main(string[] args)
+{
+    var unnamed = ("optimus", 2020);
+    Console.WriteLine($"{unnamed.Item1},{unnamed.Item2}");
+
+    var named = (Name: "bumblebee", Age: 2018);
+    Console.WriteLine($"{named.Name},{named.Age}");
+
+    var (name, age) = named;
+    Console.WriteLine($"{name},{age}");
+
+    named = unnamed;
+    Console.WriteLine($"{named.Name},{named.Age}");
+}
+/*
+optimus,2020
+bumblebee,2018
+bumblebee,2018
+optimus,2020
+*/
+```
 
