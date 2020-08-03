@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\bin\Debug\netcoreapp3.1\PropertiesInInterface.exe
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\bin\Debug\netcoreapp3.1\PropertiesInInterface.deps.json
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\bin\Debug\netcoreapp3.1\PropertiesInInterface.runtimeconfig.json
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\bin\Debug\netcoreapp3.1\PropertiesInInterface.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\bin\Debug\netcoreapp3.1\PropertiesInInterface.dll
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\bin\Debug\netcoreapp3.1\PropertiesInInterface.pdb
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\obj\Debug\netcoreapp3.1\PropertiesInInterface.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\obj\Debug\netcoreapp3.1\PropertiesInInterface.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\obj\Debug\netcoreapp3.1\PropertiesInInterface.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\obj\Debug\netcoreapp3.1\PropertiesInInterface.dll
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\obj\Debug\netcoreapp3.1\PropertiesInInterface.pdb
+C:\Users\User\Desktop\mskang\day9\PropertiesInInterface\obj\Debug\netcoreapp3.1\PropertiesInInterface.genruntimeconfig.cache
