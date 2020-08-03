@@ -1,0 +1,13 @@
+C:\Users\User\source\repos\day9\ConsoleApp1\bin\Debug\netcoreapp3.1\Imterface.exe
+C:\Users\User\source\repos\day9\ConsoleApp1\bin\Debug\netcoreapp3.1\Imterface.deps.json
+C:\Users\User\source\repos\day9\ConsoleApp1\bin\Debug\netcoreapp3.1\Imterface.runtimeconfig.json
+C:\Users\User\source\repos\day9\ConsoleApp1\bin\Debug\netcoreapp3.1\Imterface.runtimeconfig.dev.json
+C:\Users\User\source\repos\day9\ConsoleApp1\bin\Debug\netcoreapp3.1\Imterface.dll
+C:\Users\User\source\repos\day9\ConsoleApp1\bin\Debug\netcoreapp3.1\Imterface.pdb
+C:\Users\User\source\repos\day9\ConsoleApp1\obj\Debug\netcoreapp3.1\Imterface.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\day9\ConsoleApp1\obj\Debug\netcoreapp3.1\Imterface.AssemblyInfo.cs
+C:\Users\User\source\repos\day9\ConsoleApp1\obj\Debug\netcoreapp3.1\Imterface.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\day9\ConsoleApp1\obj\Debug\netcoreapp3.1\Imterface.dll
+C:\Users\User\source\repos\day9\ConsoleApp1\obj\Debug\netcoreapp3.1\Imterface.pdb
+C:\Users\User\source\repos\day9\ConsoleApp1\obj\Debug\netcoreapp3.1\Imterface.genruntimeconfig.cache
+C:\Users\User\source\repos\day9\ConsoleApp1\obj\Debug\netcoreapp3.1\Imterface.csprojAssemblyReference.cache
