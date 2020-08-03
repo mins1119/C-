@@ -4,7 +4,13 @@
 
 ### 프로퍼티
 
-get / set 메소드를 편리하게 대체할 수 있다.
+객체 지향언어는 객체의 데이터가 의도치 않게 오염되는 것을 막고다 private 나 protected 와 같은 접근한정자를 이용해서 클래스 내의 필드를 외부에서 보이지 않게 감추고, 이 필드에 접근하는 get / set 메소드를 public으로 지정한다. 
+
+C#의 프로퍼티는 get / set 메소드를 편리하게 대체할 수 있다.
+
+
+
+**프로퍼티 선언**
 
 ```c#
 class 클래스이름{
@@ -34,7 +40,7 @@ class MyClass
     public int GetMyField() { return myField; }
     public void SetMyField( int NewValue ){ myField = NewValue; }
 }
-
+//위의 메소드를 아래의 프로퍼티로 바꿀수 있다.
 class MyClass
 {
     private int myField;
@@ -53,6 +59,8 @@ class MyClass
 ```
 
 프로퍼티에서 set 접근자를 구현하지 않으면 해당  프로퍼티는 쓰기 불가(읽기전용)가 된다.
+
+쓰기전용 프로퍼티도 만들수 있겠지만 용도와 동작결과를 상세히 설명할 수 있어야 한다. 그렇지 않으면 관리하기 어려운 코드가 될 가능성이 높다.
 
 ```c#
 using System;
@@ -116,6 +124,8 @@ Age : 1021
 ```
 
 #### 자동 구현 프로퍼티
+
+C#3.0 부터 가능한 자동구현 프로퍼티. 필드를 선언할 필요가 없고 그저 get접근자와 set접근자 뒤에 세미콜론을 붙여주면 된다.
 
 c#7.0 부터 자동 구현 프로퍼티를 선언과 동시에 초기화 시켜줄수 있다.
 
@@ -283,6 +293,75 @@ Subject : math,Scores : 90 20 70 40
 
 
 
+### 인터페이스와 프로퍼티
+
+```c#
+interface 인터페이스 이름
+{
+    public 형식 프로퍼티이름1
+    {
+        get; set;
+    }
+    public 형식 프로퍼티이름2{
+        get; set;
+    }
+}
+```
+
+```c#
+using System;
+using System.Dynamic;
+
+namespace PropertiesInInterface
+{
+    interface INamedValue
+    {
+        string Name
+        {
+            get;
+            set;
+        }
+        string Value
+        {
+            get;
+            set;
+        }
+    }
+    class NamedValue : INamedValue
+    {
+        public string Name { 
+            get;
+            set;
+        }
+        public string Value
+        {
+            get;
+            set;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            NamedValue name = new NamedValue()
+            { Name = "이름", Value = "Alice" };
+            NamedValue height = new NamedValue()
+            { Name = "키", Value = "160" };
+            NamedValue weight = new NamedValue()
+            { Name = "몸무게", Value = "50" };
+
+            Console.WriteLine($"{name.Name} : {name.Value}");
+            Console.WriteLine($"{height.Name} : {height.Value}");
+            Console.WriteLine($"{weight.Name} : {weight.Value}");
+
+        }
+    }
+}
+
+```
+
+
+
 ### 추상 프로퍼티( Abstract Property )
 
 인터페이스처럼 구현되지 않은 프로퍼티를 가질 수 있다.
@@ -342,5 +421,45 @@ namespace PropertiesInAbstractClass
 Product : 00000, Product Date : 2020-08-03 오전 12:00:00
 Product : 00001, Product Date : 2020-07-20 오전 12:00:00
 */
+```
+
+
+
+
+
+
+
+
+
+```c#
+using System;
+
+namespace test1
+{
+    class NameCard
+    {
+        public int Age
+        {
+            get; set;
+        }
+        public string Name
+        {
+            get; set;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            NameCard MyCard = new NameCard();
+            MyCard.Name = "Alice";
+            MyCard.Age = 15;
+
+            Console.WriteLine($"이름 : {MyCard.Name}");
+            Console.WriteLine($"나이 : {MyCard.Age}");
+        }
+    }
+}
+
 ```
 
