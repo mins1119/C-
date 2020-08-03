@@ -259,7 +259,20 @@ var myInstance = new { Name = "Alice", Age = "9"};
 Console.WriteLine(myInstance.Name , myInstance.Age);
 ```
 
+```c#
+var a = new { Name = "Alice", Age = "9" };
+Console.WriteLine($"Name : {a.Name} , Age : {a.Age}");
 
+var b = new { Subject = "math", Scores = new int[] { 90, 20, 70, 40 } };
+Console.Write($"Subject : {b.Subject},Scores : ");
+foreach (var score in b.Scores)
+    Console.Write($"{score} ");
 
+Console.WriteLine();
+/*
+Name : Alice , Age : 9
+Subject : math,Scores : 90 20 70 40
+*/
+```
 
-
+무명형식의 프로퍼티에 할당된 값은 변경이 불가능하다.
