@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day9", "day9\day9.csproj", "{7335CE5A-DDA4-4ECA-84E6-5ADBDC9C9603}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "day9", "day9\day9.csproj", "{7335CE5A-DDA4-4ECA-84E6-5ADBDC9C9603}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imterface", "ConsoleApp1\Imterface.csproj", "{3683DF41-8856-46B4-8E38-A6FA908EDA14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imterface", "ConsoleApp1\Imterface.csproj", "{3683DF41-8856-46B4-8E38-A6FA908EDA14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerivedInterface", "DerivedInterface\DerivedInterface.csproj", "{1EFA5019-464C-4101-8F3C-DA1AEF64EDC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DerivedInterface", "DerivedInterface\DerivedInterface.csproj", "{1EFA5019-464C-4101-8F3C-DA1AEF64EDC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiInterfaceInheritance", "MultiInterfaceInheritance\MultiInterfaceInheritance.csproj", "{DF7225CB-7963-4443-9A6E-DCCCC88B086D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiInterfaceInheritance", "MultiInterfaceInheritance\MultiInterfaceInheritance.csproj", "{DF7225CB-7963-4443-9A6E-DCCCC88B086D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClass", "AbstractClass\AbstractClass.csproj", "{CA3A83C4-A271-40C3-805D-087B149B3906}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractClass", "AbstractClass\AbstractClass.csproj", "{CA3A83C4-A271-40C3-805D-087B149B3906}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Property", "Property\Property.csproj", "{94CA0511-4C1A-42E4-A2BA-9A9BF448BC75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Property", "Property\Property.csproj", "{94CA0511-4C1A-42E4-A2BA-9A9BF448BC75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoImplementedProperty", "AutoImplementedProperty\AutoImplementedProperty.csproj", "{4C6DD351-CAB0-48D0-8ED9-BDE7F2C31C2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoImplementedProperty", "AutoImplementedProperty\AutoImplementedProperty.csproj", "{4C6DD351-CAB0-48D0-8ED9-BDE7F2C31C2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructorProperty", "ConstructorProperty\ConstructorProperty.csproj", "{F86B93BE-A771-44A3-9F73-794554B94885}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConstructorProperty", "ConstructorProperty\ConstructorProperty.csproj", "{F86B93BE-A771-44A3-9F73-794554B94885}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousType", "AnonymousType\AnonymousType.csproj", "{E39D66F9-5227-4D51-A19A-6464BE286E90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnonymousType", "AnonymousType\AnonymousType.csproj", "{E39D66F9-5227-4D51-A19A-6464BE286E90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertiesInAbstractClass", "PropertiesInAbstractClass\PropertiesInAbstractClass.csproj", "{DA805EC6-FB6E-4D45-8D41-636DECB0CA7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{E39D66F9-5227-4D51-A19A-6464BE286E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E39D66F9-5227-4D51-A19A-6464BE286E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E39D66F9-5227-4D51-A19A-6464BE286E90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA805EC6-FB6E-4D45-8D41-636DECB0CA7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA805EC6-FB6E-4D45-8D41-636DECB0CA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA805EC6-FB6E-4D45-8D41-636DECB0CA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA805EC6-FB6E-4D45-8D41-636DECB0CA7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
