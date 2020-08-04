@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\UsingStack\bin\Debug\netcoreapp3.1\UsingStack.exe
+C:\Users\User\Desktop\mskang\UsingStack\bin\Debug\netcoreapp3.1\UsingStack.deps.json
+C:\Users\User\Desktop\mskang\UsingStack\bin\Debug\netcoreapp3.1\UsingStack.runtimeconfig.json
+C:\Users\User\Desktop\mskang\UsingStack\bin\Debug\netcoreapp3.1\UsingStack.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\UsingStack\bin\Debug\netcoreapp3.1\UsingStack.dll
+C:\Users\User\Desktop\mskang\UsingStack\bin\Debug\netcoreapp3.1\UsingStack.pdb
+C:\Users\User\Desktop\mskang\UsingStack\obj\Debug\netcoreapp3.1\UsingStack.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\UsingStack\obj\Debug\netcoreapp3.1\UsingStack.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\UsingStack\obj\Debug\netcoreapp3.1\UsingStack.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\UsingStack\obj\Debug\netcoreapp3.1\UsingStack.dll
+C:\Users\User\Desktop\mskang\UsingStack\obj\Debug\netcoreapp3.1\UsingStack.pdb
+C:\Users\User\Desktop\mskang\UsingStack\obj\Debug\netcoreapp3.1\UsingStack.genruntimeconfig.cache

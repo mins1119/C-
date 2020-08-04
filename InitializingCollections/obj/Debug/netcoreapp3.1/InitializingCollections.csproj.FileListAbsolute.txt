@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\InitializingCollections\bin\Debug\netcoreapp3.1\InitializingCollections.exe
+C:\Users\User\Desktop\mskang\InitializingCollections\bin\Debug\netcoreapp3.1\InitializingCollections.deps.json
+C:\Users\User\Desktop\mskang\InitializingCollections\bin\Debug\netcoreapp3.1\InitializingCollections.runtimeconfig.json
+C:\Users\User\Desktop\mskang\InitializingCollections\bin\Debug\netcoreapp3.1\InitializingCollections.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\InitializingCollections\bin\Debug\netcoreapp3.1\InitializingCollections.dll
+C:\Users\User\Desktop\mskang\InitializingCollections\bin\Debug\netcoreapp3.1\InitializingCollections.pdb
+C:\Users\User\Desktop\mskang\InitializingCollections\obj\Debug\netcoreapp3.1\InitializingCollections.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\InitializingCollections\obj\Debug\netcoreapp3.1\InitializingCollections.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\InitializingCollections\obj\Debug\netcoreapp3.1\InitializingCollections.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\InitializingCollections\obj\Debug\netcoreapp3.1\InitializingCollections.dll
+C:\Users\User\Desktop\mskang\InitializingCollections\obj\Debug\netcoreapp3.1\InitializingCollections.pdb
+C:\Users\User\Desktop\mskang\InitializingCollections\obj\Debug\netcoreapp3.1\InitializingCollections.genruntimeconfig.cache

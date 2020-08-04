@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\3DArray\bin\Debug\netcoreapp3.1\3DArray.exe
+C:\Users\User\Desktop\mskang\3DArray\bin\Debug\netcoreapp3.1\3DArray.deps.json
+C:\Users\User\Desktop\mskang\3DArray\bin\Debug\netcoreapp3.1\3DArray.runtimeconfig.json
+C:\Users\User\Desktop\mskang\3DArray\bin\Debug\netcoreapp3.1\3DArray.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\3DArray\bin\Debug\netcoreapp3.1\3DArray.dll
+C:\Users\User\Desktop\mskang\3DArray\bin\Debug\netcoreapp3.1\3DArray.pdb
+C:\Users\User\Desktop\mskang\3DArray\obj\Debug\netcoreapp3.1\3DArray.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\3DArray\obj\Debug\netcoreapp3.1\3DArray.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\3DArray\obj\Debug\netcoreapp3.1\3DArray.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\3DArray\obj\Debug\netcoreapp3.1\3DArray.dll
+C:\Users\User\Desktop\mskang\3DArray\obj\Debug\netcoreapp3.1\3DArray.pdb
+C:\Users\User\Desktop\mskang\3DArray\obj\Debug\netcoreapp3.1\3DArray.genruntimeconfig.cache

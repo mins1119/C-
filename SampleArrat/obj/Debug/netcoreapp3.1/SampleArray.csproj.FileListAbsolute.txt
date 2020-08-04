@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\mskang\SampleArrat\bin\Debug\netcoreapp3.1\SampleArray.exe
+C:\Users\User\Desktop\mskang\SampleArrat\bin\Debug\netcoreapp3.1\SampleArray.deps.json
+C:\Users\User\Desktop\mskang\SampleArrat\bin\Debug\netcoreapp3.1\SampleArray.runtimeconfig.json
+C:\Users\User\Desktop\mskang\SampleArrat\bin\Debug\netcoreapp3.1\SampleArray.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\SampleArrat\bin\Debug\netcoreapp3.1\SampleArray.dll
+C:\Users\User\Desktop\mskang\SampleArrat\bin\Debug\netcoreapp3.1\SampleArray.pdb
+C:\Users\User\Desktop\mskang\SampleArrat\obj\Debug\netcoreapp3.1\SampleArray.csprojAssemblyReference.cache
+C:\Users\User\Desktop\mskang\SampleArrat\obj\Debug\netcoreapp3.1\SampleArray.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\SampleArrat\obj\Debug\netcoreapp3.1\SampleArray.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\SampleArrat\obj\Debug\netcoreapp3.1\SampleArray.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\SampleArrat\obj\Debug\netcoreapp3.1\SampleArray.dll
+C:\Users\User\Desktop\mskang\SampleArrat\obj\Debug\netcoreapp3.1\SampleArray.pdb
+C:\Users\User\Desktop\mskang\SampleArrat\obj\Debug\netcoreapp3.1\SampleArray.genruntimeconfig.cache
