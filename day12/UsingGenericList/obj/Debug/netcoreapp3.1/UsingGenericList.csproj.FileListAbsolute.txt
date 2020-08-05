@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\bin\Debug\netcoreapp3.1\UsingGenericList.exe
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\bin\Debug\netcoreapp3.1\UsingGenericList.deps.json
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\bin\Debug\netcoreapp3.1\UsingGenericList.runtimeconfig.json
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\bin\Debug\netcoreapp3.1\UsingGenericList.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\bin\Debug\netcoreapp3.1\UsingGenericList.dll
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\bin\Debug\netcoreapp3.1\UsingGenericList.pdb
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\obj\Debug\netcoreapp3.1\UsingGenericList.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\obj\Debug\netcoreapp3.1\UsingGenericList.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\obj\Debug\netcoreapp3.1\UsingGenericList.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\obj\Debug\netcoreapp3.1\UsingGenericList.dll
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\obj\Debug\netcoreapp3.1\UsingGenericList.pdb
+C:\Users\User\Desktop\mskang\day12\UsingGenericList\obj\Debug\netcoreapp3.1\UsingGenericList.genruntimeconfig.cache

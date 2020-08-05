@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\bin\Debug\netcoreapp3.1\UsingGenericQueue.exe
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\bin\Debug\netcoreapp3.1\UsingGenericQueue.deps.json
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\bin\Debug\netcoreapp3.1\UsingGenericQueue.runtimeconfig.json
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\bin\Debug\netcoreapp3.1\UsingGenericQueue.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\bin\Debug\netcoreapp3.1\UsingGenericQueue.dll
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\bin\Debug\netcoreapp3.1\UsingGenericQueue.pdb
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\obj\Debug\netcoreapp3.1\UsingGenericQueue.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\obj\Debug\netcoreapp3.1\UsingGenericQueue.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\obj\Debug\netcoreapp3.1\UsingGenericQueue.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\obj\Debug\netcoreapp3.1\UsingGenericQueue.dll
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\obj\Debug\netcoreapp3.1\UsingGenericQueue.pdb
+C:\Users\User\Desktop\mskang\day12\UsingGenericQueue\obj\Debug\netcoreapp3.1\UsingGenericQueue.genruntimeconfig.cache

@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\bin\Debug\netcoreapp3.1\UsingDictionary.exe
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\bin\Debug\netcoreapp3.1\UsingDictionary.deps.json
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\bin\Debug\netcoreapp3.1\UsingDictionary.runtimeconfig.json
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\bin\Debug\netcoreapp3.1\UsingDictionary.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\bin\Debug\netcoreapp3.1\UsingDictionary.dll
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\bin\Debug\netcoreapp3.1\UsingDictionary.pdb
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\obj\Debug\netcoreapp3.1\UsingDictionary.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\obj\Debug\netcoreapp3.1\UsingDictionary.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\obj\Debug\netcoreapp3.1\UsingDictionary.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\obj\Debug\netcoreapp3.1\UsingDictionary.dll
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\obj\Debug\netcoreapp3.1\UsingDictionary.pdb
+C:\Users\User\Desktop\mskang\day12\UsingDictionary\obj\Debug\netcoreapp3.1\UsingDictionary.genruntimeconfig.cache
