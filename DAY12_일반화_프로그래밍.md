@@ -2,7 +2,7 @@
 
 ## 일반화 ( Generalization )
 
-특수한 개냠으로부터 공콩된 개념을 찾아 묶는 것이다.
+특수한 개념으로부터 공통된 개념을 찾아 묶는 것이다.
 
 일반화 프로그래밍은 "데이터 형식"을 일반화한다.
 
@@ -340,7 +340,7 @@ namespace UsingGenericStack
 */
 ```
 
-Dictionary< TKey, TValue >
+### Dictionary< TKey, TValue >
 
 ```c#
 using System;

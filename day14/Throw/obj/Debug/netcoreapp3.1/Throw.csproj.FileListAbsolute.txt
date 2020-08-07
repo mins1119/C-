@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\mskang\day14\Throw\bin\Debug\netcoreapp3.1\Throw.exe
+C:\Users\User\Desktop\mskang\day14\Throw\bin\Debug\netcoreapp3.1\Throw.deps.json
+C:\Users\User\Desktop\mskang\day14\Throw\bin\Debug\netcoreapp3.1\Throw.runtimeconfig.json
+C:\Users\User\Desktop\mskang\day14\Throw\bin\Debug\netcoreapp3.1\Throw.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\day14\Throw\bin\Debug\netcoreapp3.1\Throw.dll
+C:\Users\User\Desktop\mskang\day14\Throw\bin\Debug\netcoreapp3.1\Throw.pdb
+C:\Users\User\Desktop\mskang\day14\Throw\obj\Debug\netcoreapp3.1\Throw.csprojAssemblyReference.cache
+C:\Users\User\Desktop\mskang\day14\Throw\obj\Debug\netcoreapp3.1\Throw.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\day14\Throw\obj\Debug\netcoreapp3.1\Throw.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\day14\Throw\obj\Debug\netcoreapp3.1\Throw.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\day14\Throw\obj\Debug\netcoreapp3.1\Throw.dll
+C:\Users\User\Desktop\mskang\day14\Throw\obj\Debug\netcoreapp3.1\Throw.pdb
+C:\Users\User\Desktop\mskang\day14\Throw\obj\Debug\netcoreapp3.1\Throw.genruntimeconfig.cache

@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\bin\Debug\netcoreapp3.1\ThrowExpression.exe
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\bin\Debug\netcoreapp3.1\ThrowExpression.deps.json
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\bin\Debug\netcoreapp3.1\ThrowExpression.runtimeconfig.json
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\bin\Debug\netcoreapp3.1\ThrowExpression.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\bin\Debug\netcoreapp3.1\ThrowExpression.dll
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\bin\Debug\netcoreapp3.1\ThrowExpression.pdb
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\obj\Debug\netcoreapp3.1\ThrowExpression.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\obj\Debug\netcoreapp3.1\ThrowExpression.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\obj\Debug\netcoreapp3.1\ThrowExpression.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\obj\Debug\netcoreapp3.1\ThrowExpression.dll
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\obj\Debug\netcoreapp3.1\ThrowExpression.pdb
+C:\Users\User\Desktop\mskang\day14\ThrowExpression\obj\Debug\netcoreapp3.1\ThrowExpression.genruntimeconfig.cache

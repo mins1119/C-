@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\bin\Debug\netcoreapp3.1\ConstraintOnTypeParameter.exe
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\bin\Debug\netcoreapp3.1\ConstraintOnTypeParameter.deps.json
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\bin\Debug\netcoreapp3.1\ConstraintOnTypeParameter.runtimeconfig.json
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\bin\Debug\netcoreapp3.1\ConstraintOnTypeParameter.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\bin\Debug\netcoreapp3.1\ConstraintOnTypeParameter.dll
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\bin\Debug\netcoreapp3.1\ConstraintOnTypeParameter.pdb
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\obj\Debug\netcoreapp3.1\ConstraintOnTypeParameter.csprojAssemblyReference.cache
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\obj\Debug\netcoreapp3.1\ConstraintOnTypeParameter.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\obj\Debug\netcoreapp3.1\ConstraintOnTypeParameter.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\obj\Debug\netcoreapp3.1\ConstraintOnTypeParameter.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\obj\Debug\netcoreapp3.1\ConstraintOnTypeParameter.dll
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\obj\Debug\netcoreapp3.1\ConstraintOnTypeParameter.pdb
+C:\Users\User\Desktop\mskang\day12\ConstraintOnTypeParameter\obj\Debug\netcoreapp3.1\ConstraintOnTypeParameter.genruntimeconfig.cache
