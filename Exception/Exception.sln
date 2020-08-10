@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exception", "Exception\Exception.csproj", "{859146EC-F804-448D-B75D-42D9ADBF54E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finally", "Finally\Finally.csproj", "{6DC4DB86-64FF-4B36-90C7-F57E75761257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyException", "MyException\MyException.csproj", "{23BC31A0-6C4C-4979-B358-960D26895430}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{859146EC-F804-448D-B75D-42D9ADBF54E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{859146EC-F804-448D-B75D-42D9ADBF54E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{859146EC-F804-448D-B75D-42D9ADBF54E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{859146EC-F804-448D-B75D-42D9ADBF54E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC4DB86-64FF-4B36-90C7-F57E75761257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC4DB86-64FF-4B36-90C7-F57E75761257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC4DB86-64FF-4B36-90C7-F57E75761257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC4DB86-64FF-4B36-90C7-F57E75761257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23BC31A0-6C4C-4979-B358-960D26895430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23BC31A0-6C4C-4979-B358-960D26895430}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23BC31A0-6C4C-4979-B358-960D26895430}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23BC31A0-6C4C-4979-B358-960D26895430}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {158249E7-A05C-456F-9538-379B669ABE81}
+	EndGlobalSection
+EndGlobal
