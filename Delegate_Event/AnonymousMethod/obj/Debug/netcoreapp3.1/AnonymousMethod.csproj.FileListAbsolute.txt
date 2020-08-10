@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\bin\Debug\netcoreapp3.1\AnonymousMethod.exe
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\bin\Debug\netcoreapp3.1\AnonymousMethod.deps.json
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\bin\Debug\netcoreapp3.1\AnonymousMethod.runtimeconfig.json
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\bin\Debug\netcoreapp3.1\AnonymousMethod.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\bin\Debug\netcoreapp3.1\AnonymousMethod.dll
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\bin\Debug\netcoreapp3.1\AnonymousMethod.pdb
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\obj\Debug\netcoreapp3.1\AnonymousMethod.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\obj\Debug\netcoreapp3.1\AnonymousMethod.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\obj\Debug\netcoreapp3.1\AnonymousMethod.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\obj\Debug\netcoreapp3.1\AnonymousMethod.dll
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\obj\Debug\netcoreapp3.1\AnonymousMethod.pdb
+C:\Users\User\Desktop\mskang\Delegate_Event\AnonymousMethod\obj\Debug\netcoreapp3.1\AnonymousMethod.genruntimeconfig.cache

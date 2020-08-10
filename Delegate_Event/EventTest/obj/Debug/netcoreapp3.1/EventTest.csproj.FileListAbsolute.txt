@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\bin\Debug\netcoreapp3.1\EventTest.exe
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\bin\Debug\netcoreapp3.1\EventTest.deps.json
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\bin\Debug\netcoreapp3.1\EventTest.runtimeconfig.json
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\bin\Debug\netcoreapp3.1\EventTest.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\bin\Debug\netcoreapp3.1\EventTest.dll
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\bin\Debug\netcoreapp3.1\EventTest.pdb
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\obj\Debug\netcoreapp3.1\EventTest.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\obj\Debug\netcoreapp3.1\EventTest.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\obj\Debug\netcoreapp3.1\EventTest.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\obj\Debug\netcoreapp3.1\EventTest.dll
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\obj\Debug\netcoreapp3.1\EventTest.pdb
+C:\Users\User\Desktop\mskang\Delegate_Event\EventTest\obj\Debug\netcoreapp3.1\EventTest.genruntimeconfig.cache
