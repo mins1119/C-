@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\bin\Debug\netcoreapp3.1\ExceptionFiltering.exe
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\bin\Debug\netcoreapp3.1\ExceptionFiltering.deps.json
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\bin\Debug\netcoreapp3.1\ExceptionFiltering.runtimeconfig.json
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\bin\Debug\netcoreapp3.1\ExceptionFiltering.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\bin\Debug\netcoreapp3.1\ExceptionFiltering.dll
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\bin\Debug\netcoreapp3.1\ExceptionFiltering.pdb
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\obj\Debug\netcoreapp3.1\ExceptionFiltering.csprojAssemblyReference.cache
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\obj\Debug\netcoreapp3.1\ExceptionFiltering.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\obj\Debug\netcoreapp3.1\ExceptionFiltering.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\obj\Debug\netcoreapp3.1\ExceptionFiltering.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\obj\Debug\netcoreapp3.1\ExceptionFiltering.dll
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\obj\Debug\netcoreapp3.1\ExceptionFiltering.pdb
+C:\Users\User\Desktop\mskang\Exception\ExceptionFiltering\obj\Debug\netcoreapp3.1\ExceptionFiltering.genruntimeconfig.cache

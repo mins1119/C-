@@ -392,4 +392,84 @@ Argument : 300,Range : 0~255
 
 catch()문 뒤에 when 키워드를 이용해서 제약조건을 기술하면 된다.
 
+```c#
+using System;
+
+namespace ExceptionFiltering
+{
+    class FilterableException : Exception
+    {
+        public int ErrorNo { get; set; }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter number between 0~10! : ");
+            string input = Console.ReadLine();
+            try
+            {
+                int num = Convert.ToInt32(input);
+                if (num < 0 || num > 10)
+                    throw new FilterableException() { ErrorNo = num };
+                else
+                    Console.WriteLine($"Output: {num} ");
+            }
+            catch(FilterableException e) when (e.ErrorNo < 0)
+            {
+                Console.WriteLine("Negative input is not allowed");
+            }
+            catch(FilterableException e) when (e.ErrorNo > 0)
+            {
+                Console.WriteLine("Too big number is not allowed");
+            }
+        }
+    }
+}
+/*
+Enter number between 0~10! :
+-1
+Negative input is not allowed
+
+Enter number between 0~10! :
+5
+Output: 5
+
+Enter number between 0~10! :
+100
+Too big number is not allowed
+*/
+```
+
+
+
 ## StackTrace
+
+문제가 발생한 부분의 소스코드 위치를 알려준다.
+
+```c#
+using System;
+
+namespace StackTrace
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                int a = 1;
+                Console.WriteLine(3 / --a);
+            }
+            catch(DivideByZeroException e)
+            {
+                Console.WriteLine(e.StackTrace);
+            }
+        }
+    }
+}
+/*
+ at StackTrace.Program.Main(String[] args) in C:\Users\User\Desktop\mskang\Exception\StackTrace\Program.cs:line 12
+*/
+```
+
