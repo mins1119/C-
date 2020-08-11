@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\bin\Debug\netcoreapp3.1\StatementLambda.exe
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\bin\Debug\netcoreapp3.1\StatementLambda.deps.json
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\bin\Debug\netcoreapp3.1\StatementLambda.runtimeconfig.json
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\bin\Debug\netcoreapp3.1\StatementLambda.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\bin\Debug\netcoreapp3.1\StatementLambda.dll
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\bin\Debug\netcoreapp3.1\StatementLambda.pdb
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\obj\Debug\netcoreapp3.1\StatementLambda.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\obj\Debug\netcoreapp3.1\StatementLambda.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\obj\Debug\netcoreapp3.1\StatementLambda.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\obj\Debug\netcoreapp3.1\StatementLambda.dll
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\obj\Debug\netcoreapp3.1\StatementLambda.pdb
+C:\Users\User\Desktop\mskang\Lambda_Expression\StatementLambda\obj\Debug\netcoreapp3.1\StatementLambda.genruntimeconfig.cache

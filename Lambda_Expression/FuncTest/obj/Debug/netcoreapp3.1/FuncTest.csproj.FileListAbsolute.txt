@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\obj\Debug\netcoreapp3.1\FuncTest.csprojAssemblyReference.cache
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\obj\Debug\netcoreapp3.1\FuncTest.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\obj\Debug\netcoreapp3.1\FuncTest.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\obj\Debug\netcoreapp3.1\FuncTest.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\bin\Debug\netcoreapp3.1\FuncTest.exe
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\bin\Debug\netcoreapp3.1\FuncTest.deps.json
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\bin\Debug\netcoreapp3.1\FuncTest.runtimeconfig.json
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\bin\Debug\netcoreapp3.1\FuncTest.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\bin\Debug\netcoreapp3.1\FuncTest.dll
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\bin\Debug\netcoreapp3.1\FuncTest.pdb
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\obj\Debug\netcoreapp3.1\FuncTest.dll
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\obj\Debug\netcoreapp3.1\FuncTest.pdb
+C:\Users\User\Desktop\mskang\Lambda_Expression\FuncTest\obj\Debug\netcoreapp3.1\FuncTest.genruntimeconfig.cache

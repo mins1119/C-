@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\bin\Debug\netcoreapp3.1\ExpressionTreeViaLambda.exe
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\bin\Debug\netcoreapp3.1\ExpressionTreeViaLambda.deps.json
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\bin\Debug\netcoreapp3.1\ExpressionTreeViaLambda.runtimeconfig.json
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\bin\Debug\netcoreapp3.1\ExpressionTreeViaLambda.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\bin\Debug\netcoreapp3.1\ExpressionTreeViaLambda.dll
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\bin\Debug\netcoreapp3.1\ExpressionTreeViaLambda.pdb
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\obj\Debug\netcoreapp3.1\ExpressionTreeViaLambda.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\obj\Debug\netcoreapp3.1\ExpressionTreeViaLambda.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\obj\Debug\netcoreapp3.1\ExpressionTreeViaLambda.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\obj\Debug\netcoreapp3.1\ExpressionTreeViaLambda.dll
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\obj\Debug\netcoreapp3.1\ExpressionTreeViaLambda.pdb
+C:\Users\User\Desktop\mskang\Lambda_Expression\ExpressionTreeViaLambda\obj\Debug\netcoreapp3.1\ExpressionTreeViaLambda.genruntimeconfig.cache
