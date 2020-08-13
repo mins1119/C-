@@ -336,29 +336,29 @@ namespace DelegateChains
         static void Main(string[] args)
         {
             Notifier notifier = new Notifier();
-            EventListener listener1 = new EventListener("EventListner1");
-            EventListener listener2 = new EventListener("EventListner2");
-            EventListener listener3 = new EventListener("EventListner3");
+            EventListener listener1 = new EventListener("Alice");
+            EventListener listener2 = new EventListener("Optimus");
+            EventListener listener3 = new EventListener("Min-seo");
 
             notifier.EventOccured += listener1.SomethingHappened;
             notifier.EventOccured += listener2.SomethingHappened;
             notifier.EventOccured += listener3.SomethingHappened;
-            notifier.EventOccured("You've got mail");
+            notifier.EventOccured("Access");
             Console.WriteLine();
             notifier.EventOccured -= listener2.SomethingHappened;
-            notifier.EventOccured("Download Complete");
+            notifier.EventOccured("Welcome to the Wonderland");
             Console.WriteLine();
             notifier.EventOccured = new Notify(listener2.SomethingHappened)
                                     + new Notify(listener3.SomethingHappened);
-            notifier.EventOccured("Nuclear launch detected");
+            notifier.EventOccured("Cybertron in Danger");
             Console.WriteLine();
             Notify notify1 = new Notify(listener1.SomethingHappened);
             Notify notify2 = new Notify(listener2.SomethingHappened);
             notifier.EventOccured = (Notify)Delegate.Combine(notify1, notify2);
-            notifier.EventOccured("Fire");
+            notifier.EventOccured("Wrong Match");
             Console.WriteLine();
             notifier.EventOccured = (Notify)Delegate.Remove(notifier.EventOccured, notify2);
-            notifier.EventOccured("RPG");
+            notifier.EventOccured("Bye");
         }
     }
 }
