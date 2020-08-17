@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\bin\Debug\netcoreapp3.1\GroupBy.exe
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\bin\Debug\netcoreapp3.1\GroupBy.deps.json
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\bin\Debug\netcoreapp3.1\GroupBy.runtimeconfig.json
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\bin\Debug\netcoreapp3.1\GroupBy.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\bin\Debug\netcoreapp3.1\GroupBy.dll
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\bin\Debug\netcoreapp3.1\GroupBy.pdb
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\obj\Debug\netcoreapp3.1\GroupBy.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\obj\Debug\netcoreapp3.1\GroupBy.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\obj\Debug\netcoreapp3.1\GroupBy.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\obj\Debug\netcoreapp3.1\GroupBy.dll
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\obj\Debug\netcoreapp3.1\GroupBy.pdb
+C:\Users\User\Desktop\mskang\LINQ\GroupBy\obj\Debug\netcoreapp3.1\GroupBy.genruntimeconfig.cache

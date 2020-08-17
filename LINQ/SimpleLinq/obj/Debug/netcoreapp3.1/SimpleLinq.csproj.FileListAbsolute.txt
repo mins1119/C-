@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\bin\Debug\netcoreapp3.1\SimpleLinq.exe
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\bin\Debug\netcoreapp3.1\SimpleLinq.deps.json
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\bin\Debug\netcoreapp3.1\SimpleLinq.runtimeconfig.json
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\bin\Debug\netcoreapp3.1\SimpleLinq.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\bin\Debug\netcoreapp3.1\SimpleLinq.dll
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\bin\Debug\netcoreapp3.1\SimpleLinq.pdb
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\obj\Debug\netcoreapp3.1\SimpleLinq.csprojAssemblyReference.cache
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\obj\Debug\netcoreapp3.1\SimpleLinq.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\obj\Debug\netcoreapp3.1\SimpleLinq.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\obj\Debug\netcoreapp3.1\SimpleLinq.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\obj\Debug\netcoreapp3.1\SimpleLinq.dll
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\obj\Debug\netcoreapp3.1\SimpleLinq.pdb
+C:\Users\User\Desktop\mskang\LINQ\SimpleLinq\obj\Debug\netcoreapp3.1\SimpleLinq.genruntimeconfig.cache

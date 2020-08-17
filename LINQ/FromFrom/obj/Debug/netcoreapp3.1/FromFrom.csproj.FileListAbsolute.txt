@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\bin\Debug\netcoreapp3.1\FromFrom.exe
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\bin\Debug\netcoreapp3.1\FromFrom.deps.json
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\bin\Debug\netcoreapp3.1\FromFrom.runtimeconfig.json
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\bin\Debug\netcoreapp3.1\FromFrom.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\bin\Debug\netcoreapp3.1\FromFrom.dll
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\bin\Debug\netcoreapp3.1\FromFrom.pdb
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\obj\Debug\netcoreapp3.1\FromFrom.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\obj\Debug\netcoreapp3.1\FromFrom.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\obj\Debug\netcoreapp3.1\FromFrom.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\obj\Debug\netcoreapp3.1\FromFrom.dll
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\obj\Debug\netcoreapp3.1\FromFrom.pdb
+C:\Users\User\Desktop\mskang\LINQ\FromFrom\obj\Debug\netcoreapp3.1\FromFrom.genruntimeconfig.cache

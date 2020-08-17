@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\bin\Debug\netcoreapp3.1\lambdaTest.exe
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\bin\Debug\netcoreapp3.1\lambdaTest.deps.json
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\bin\Debug\netcoreapp3.1\lambdaTest.runtimeconfig.json
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\bin\Debug\netcoreapp3.1\lambdaTest.runtimeconfig.dev.json
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\bin\Debug\netcoreapp3.1\lambdaTest.dll
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\bin\Debug\netcoreapp3.1\lambdaTest.pdb
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\obj\Debug\netcoreapp3.1\lambdaTest.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\obj\Debug\netcoreapp3.1\lambdaTest.AssemblyInfo.cs
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\obj\Debug\netcoreapp3.1\lambdaTest.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\obj\Debug\netcoreapp3.1\lambdaTest.dll
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\obj\Debug\netcoreapp3.1\lambdaTest.pdb
+C:\Users\User\Desktop\mskang\LINQ\lambdaTest\obj\Debug\netcoreapp3.1\lambdaTest.genruntimeconfig.cache
