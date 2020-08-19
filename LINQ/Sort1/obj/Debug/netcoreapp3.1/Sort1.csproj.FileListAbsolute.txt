@@ -10,3 +10,4 @@ C:\Users\User\Desktop\mskang\LINQ\Sort1\bin\Debug\netcoreapp3.1\Sort1.pdb
 C:\Users\User\Desktop\mskang\LINQ\Sort1\obj\Debug\netcoreapp3.1\Sort1.dll
 C:\Users\User\Desktop\mskang\LINQ\Sort1\obj\Debug\netcoreapp3.1\Sort1.pdb
 C:\Users\User\Desktop\mskang\LINQ\Sort1\obj\Debug\netcoreapp3.1\Sort1.genruntimeconfig.cache
+C:\Users\User\Desktop\mskang\LINQ\Sort1\obj\Debug\netcoreapp3.1\Sort1.csprojAssemblyReference.cache

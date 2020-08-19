@@ -99,6 +99,8 @@ namespace From
 
 where 연산자에 조건을 매개변수로 입력하면 LINQ가 해당 조건에 부합하는 데이터만을 걸러낸다.
 
+조건에는 반환타입이 bool 형식인 코드를 사용할 수 있다.
+
 ```c#
 where 조건
 ```
@@ -286,13 +288,15 @@ namespace FromFrom
 
 ## group by
 
-데이터를 특정기준에 따라 나누어 정리한다.
+- 데이터를 특정기준에 따라 나누어 정리한다.
 
 ```c#
 group A by B into C
 ```
 
-A에는 from절에서 뽑아낸 범위변수를, B에는 분류기준을, C에는 그룹변수를 위치시킨다.
+- A에는 from절에서 뽑아낸 범위변수를, B에는 분류기준을, C에는 그룹변수를 위치시킨다.
+
+- LINQ의 group...by는 지정된 값을 기준으로 컬렉션의 요소를 그룹으로 분류하고 최종적으로 모든 그룹의 컬렉션을 반환한다.
 
 ```c#
 Profile[] arrProfile =
@@ -570,7 +574,7 @@ namespace LINQ2
 
 ## LINQ 표준 연산자
 
-정렬
+### 정렬
 
 | 메소드 이름       | 설명                              | C#쿼리식 구문              |
 | ----------------- | --------------------------------- | -------------------------- |
@@ -604,6 +608,35 @@ namespace Sort1
                                           orderby word.Substring(0, 1) descending
                                           select word;
             foreach (string str in query_2)
+                Console.WriteLine(str);
+        }
+    }
+}
+```
+
+```c#
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Sort2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] words = { "transformers", "revenge", "of", "the", "fallen" };
+            IEnumerable<string> query = from word in words
+                                        orderby word.Length, word.Substring(0, 1)
+                                        select word;
+            foreach (string str in query)
+                Console.WriteLine(str);
+
+            IEnumerable<string> query2 = from word in words
+                                         orderby word.Length, word.Substring(0, 1) descending
+                                         select word;
+            foreach (string str in query2)
                 Console.WriteLine(str);
         }
     }
