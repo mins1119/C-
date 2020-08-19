@@ -643,3 +643,169 @@ namespace Sort2
 }
 ```
 
+### 집합작업
+
+| 메소드 이름 | 설명                                                         | C#쿼리식 구문 |
+| ----------- | ------------------------------------------------------------ | ------------- |
+| OrderBy     | 컬렉션에서 중복값을 제거한다.                                | 해당사항 없음 |
+| Except      | 두 번째 컬렉션에 표시되지 않는 한 컬렉션의 요소를 의미하는 차집합을 반환한다. | 해당사항 없음 |
+| Intersect   | 두 컬렉션에 각각 표시되는 요소를 의미하는 교집합을 반환한다. | 해당사항 없음 |
+| Union       | 두 컬렉션 중 하나에 표시되는 고유한 요소를 의미하는 합집합을 반환한다. | 해당사항 없음 |
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ex1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("-----Distinct-----");
+            string[] planets = { "Mercury","Venus","Mars","Pluto","Venus","Earth","Pluto"};
+
+            IEnumerable<string> distinct = from planet in planets.Distinct()
+                                        select planet;
+            foreach(var str in distinct)
+            {
+                Console.WriteLine(str);
+            }
+            Console.WriteLine("-----Except-----");
+            string[] planets1 = { "Mercury", "Venus", "Earth", "Jupiter" };
+            string[] planets2 = { "Mercury", "Earth", "Mars", "Jupiter" };
+            IEnumerable<string> except = from planet in planets1.Except(planets2)
+                                         select planet;
+
+            foreach(var str in except)
+            {
+                Console.WriteLine(str);
+            }
+            Console.WriteLine("-----Intersect-----");
+            IEnumerable<string> intersect = from planet in planets1.Intersect(planets2)
+                                            select planet;
+            foreach(var str in intersect)
+            {
+                Console.WriteLine(str);
+            }
+            Console.WriteLine("-----Union-----");
+            IEnumerable<string> union = from planet in planets1.Union(planets2)
+                                        select planet;
+            foreach(var str in union)
+            {
+                Console.WriteLine(str);
+            }
+        }
+    }
+}
+/*
+-----Distinct-----
+Mercury
+Venus
+Mars
+Pluto
+Earth
+-----Except-----
+Venus
+-----Intersect-----
+Mercury
+Earth
+Jupiter
+-----Union-----
+Mercury
+Venus
+Earth
+Jupiter
+Mars
+*/
+```
+
+### 데이터 필터링
+
+| 메서드 이름 | 설명                                                         | C# 쿼리식 구문 |
+| ----------- | ------------------------------------------------------------ | -------------- |
+| OfType      | 지정된 형식으로 캐스트 할 수 있는지 여부에 따라 값을 선택한다. | 해당 사항 없음 |
+| Where       | 조건자 함수를 기반으로 하는 값을 선택한다.                   | where          |
+
+### 수량
+
+| 메소드 이름 | 설명                                               | C# 쿼리식 구문 |
+| ----------- | -------------------------------------------------- | -------------- |
+| All         | 시퀀스의 모든 요소가 조건을 만족하는지를 확인한다. | 해당 사항 없음 |
+| Any         | 시퀀스의 임의의 요소가 조건을 만족하는지 확인한다. | 해당 사항 없음 |
+| Contains    | 시퀀스에 지정된 요소가 있는지 확인한다.            | 해당 사항 없음 |
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ex2
+{
+    class Market
+    {
+        public string Name { get; set; }
+        public string[] Items { get; set; }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Market> markets = new List<Market>
+            {
+                new Market{Name="Alice's",Items =new string[]{"rabbit","hatter","flower"}},
+                new Market{Name="Belle's",Items =new string[]{"rose","beast","cup","flower"}},
+                new Market{Name="Jasmin's",Items =new string[]{"carpet","tiger","lamp"}},
+            };
+            Console.WriteLine("-----All-----");
+            IEnumerable<string> all_names = from market in markets
+                                        where market.Items.All(item => item.Length == 6)
+                                        select market.Name;
+            foreach (string name in all_names)
+            {
+                Console.WriteLine($"{name} market");
+            }
+
+            Console.WriteLine("-----Any-----");
+            IEnumerable<string> any_names = from market in markets
+                                            where market.Items.Any(item => item.StartsWith("c"))
+                                            select market.Name;
+            foreach(string name in any_names)
+            {
+                Console.WriteLine($"{name} market");
+            }
+            Console.WriteLine("-----Contains-----");
+            IEnumerable<string> con_names = from market in markets
+                                            where market.Items.Contains("flower")
+                                            select market.Name;
+            foreach(string name in con_names)
+            {
+                Console.WriteLine($"{name} market");
+            }
+        }
+    }
+}
+/*
+-----All-----
+Alice's market
+-----Any-----
+Belle's market
+Jasmin's market
+-----Contains-----
+Alice's market
+Belle's market
+*/
+```
+
+### 프로젝션
+
+| 메서드 이름 | 설명                                        | C# 쿼리식 구문 |
+| ----------- | ------------------------------------------- | -------------- |
+| Select      | 변환함수를 기반으로 하는 값을 프로젝션한다. | select         |
+| SelcetMany  | 조건자 함수를 기반으로 하는 값을 선택한다.  | from 중첩      |
