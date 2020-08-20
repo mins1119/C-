@@ -1,4 +1,4 @@
-# LINQ													20.08.17
+# sLINQ													20.08.17
 
 ## LINQ ( Language INtegrated Query )
 
@@ -809,3 +809,322 @@ Belle's market
 | ----------- | ------------------------------------------- | -------------- |
 | Select      | 변환함수를 기반으로 하는 값을 프로젝션한다. | select         |
 | SelcetMany  | 조건자 함수를 기반으로 하는 값을 선택한다.  | from 중첩      |
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ex3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> words = new List<string>() { "Alice", "in", "wonderland" };
+
+            Console.WriteLine("-----select-----");
+            var s_query = from word in words
+                          select word.Substring(0, 1);
+            foreach (string s in s_query)
+                Console.WriteLine(s);
+
+            Console.WriteLine("-----SelectMany-----");
+            List<string> phrases = new List<string>() { "Alice in wonderland", "Transformers Dark of the Moon" };
+
+            var m_query = from phrase in phrases
+                          from word in phrase.Split(' ')
+                          select word;
+
+            foreach (string s in m_query)
+                Console.WriteLine(s);
+
+
+        }
+    }
+}
+/*
+-----select-----
+A
+i
+w
+-----SelectMany-----
+Alice
+in
+wonderland
+Transformers
+Dark
+of
+the
+Moon
+*/
+```
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SelectVSSelctMany
+{
+    class Bouquet
+    {
+        public List<string> Flowers { get; set; }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Bouquet> bouquets = new List<Bouquet>()
+            {
+                new Bouquet{Flowers = new List<string>{ "Daisy","Jasmin","Rose","tulip"} },
+                new Bouquet{Flowers = new List<string>{ "iris","lilac","lupin"} },
+                new Bouquet{Flowers = new List<string>{"lily","peach","morning glory","orchid"}},
+                new Bouquet{Flowers = new List<string>{ "Azalea","Clover","camellia","dandelion"} }
+            };
+         
+            IEnumerable<List<string>> query1 = bouquets.Select(bq => bq.Flowers);
+
+            IEnumerable<string> query2 = bouquets.SelectMany(bq => bq.Flowers);
+
+            Console.WriteLine("Results by using Select() : ");
+            foreach(IEnumerable<string> collection in query1)
+                foreach(string item in collection)
+                    Console.WriteLine(item);
+
+            Console.WriteLine("-----\nResults by using SelectMany() :");
+            foreach (string item in query2)
+                Console.WriteLine(item);
+
+        }
+    }
+}
+```
+
+### 데이터 분할
+
+| 연산자 이름 | 설명                                                         | C# 쿼리식 구문 |
+| ----------- | ------------------------------------------------------------ | -------------- |
+| Skip        | 시퀀스에서 지정한  위치까지 요소를 건너뒨다.                 | 해당 사항 없음 |
+| SkipWhile   | 요소가 조건을 충족하지 않을 때까지 조건자 함수를 기반으로 하여 요소를 건너뛴다. | 해당 사항 없음 |
+| Take        | 시퀀스에서 지정한 위치까지 요소를 사용한다.                  | 해당 사항 없음 |
+| TakeWhile   | 요소가 조건을 충족하지 않을 때까지 조건자 함수를 기반으로 하여 요소를 사용한다. | 해당 사항 없음 |
+
+### 조인 작업
+
+| 메소드 이름 | 설명                                                         | c# 쿼리식 구문                          |
+| ----------- | ------------------------------------------------------------ | --------------------------------------- |
+| Join        | 키 선택기 함수를 기준으로 두 시퀀스를 join한 다음 값 쌍을 추출한다. | join ... in ... on ... equals ...       |
+| GroupJoin   | 키 선택기 함수를 기준으로 두 시퀀스를 join한 다음 결과로 생성된 일치 항목을 요소마다 그룹화 한다. | join ... in ...on ... equals ..into ... |
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JoinGroupJoin
+{
+    class Product
+    {
+        public string Name { get; set; }
+        public int CategoryId { get; set; }
+    }
+    class Category
+    {
+        public int Id { get; set; }
+        public string CategoryName { get; set; }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Product> products = new List<Product>
+            {
+                new Product{Name ="Jelly", CategoryId = 0},
+                new Product{Name = "Cookies",CategoryId = 0},
+                new Product{Name = "IceCream",CategoryId = 0},
+                new Product{Name = "Doll",CategoryId = 1},
+                new Product{Name = "Robot",CategoryId = 1},
+                new Product{Name = "TeaSet",CategoryId = 2},
+                new Product{Name = "AirFryer"}
+            };
+            List<Category> catrgories = new List<Category>
+            {
+                new Category{Id = 0, CategoryName="Food"},
+                new Category{Id = 1, CategoryName="Stationary"},
+                new Category{Id = 2, CategoryName="DiningWare"}
+            };
+            Console.WriteLine("-----join-----");
+            var g_query = from product in products
+                          join category in catrgories on product.CategoryId equals category.Id
+                          select new { product.Name, category.CategoryName };
+            foreach (var item in g_query)
+            {
+                Console.WriteLine($"{item.Name} - {item.CategoryName}");
+            }
+
+            Console.WriteLine("-----GroupJoin-----");
+            var ProductsGroups = from category in catrgories
+                                 join product in products on category.Id equals product.CategoryId into productGroup
+                                 select productGroup;
+
+            foreach(IEnumerable<Product> productGroup in ProductsGroups)
+            {
+                Console.WriteLine("Group");
+                foreach(Product product in productGroup)
+                {
+                    Console.WriteLine($"{product.Name,10}");
+                }    
+            }
+        }
+    }
+}
+/*
+-----join-----
+Jelly - Food
+Cookies - Food
+IceCream - Food
+Doll - Stationary
+Robot - Stationary
+TeaSet - DiningWare
+AirFryer - Food
+-----GroupJoin-----
+Group
+     Jelly
+   Cookies
+  IceCream
+  AirFryer
+Group
+      Doll
+     Robot
+Group
+    TeaSet
+*/
+```
+
+### 데이터 그룹화
+
+| 메소드 이름 | 설명                                                         | c# 쿼리식 구문                          |
+| ----------- | ------------------------------------------------------------ | --------------------------------------- |
+| GroupBy     | 공통 특성을 고유하는 요소를 그룹화한다.                      | group ... by<br />group ... by ... into |
+| ToLookup    | 키 선택기 함수에 따라 Lookup<TKey, TElement>에 요소를 삽입한다. | 해당 사항 없음                          |
+
+### 생성작업
+
+| 메소드 이름    | 설명                                                   | c#쿼리식 구문  |
+| -------------- | ------------------------------------------------------ | -------------- |
+| DefaultIfEmpty | 빈 컬렉션을 기본값을 갖는 singleton 컬렉션으로 바꾼다. | 해당 사항 없음 |
+| Empty          | 비어있는 컬렉션을 반환한다.                            | 해당 사항 없음 |
+| Range          | 일련의 숫자를 포함하는 컬렉션을 생성한다.              | 해당 사항 없음 |
+| Repeat         | 반복되는 값이 하나 들어있는 컬렉션을 생성한다.         | 해당 사항 없음 |
+
+### 같음 연산
+
+| 메소드 이름   | 설명                                                         | c# 쿼리 식 구문 |
+| ------------- | ------------------------------------------------------------ | --------------- |
+| SequenceEqual | 쌍 단위 방식으로 요소를 비교하여 두 시퀀스가 서로 같은지 확인한다. | 해당 사항 없음  |
+
+### 요소 작업
+
+| 메소드 이름      | 설명                                                         | c# 쿼리 식 구문 |
+| ---------------- | ------------------------------------------------------------ | --------------- |
+| ElementAt        | 컬렉션에 지정된 인덱스에 있는 요소를 반환한다.               | 해당 사항 없음  |
+| ElementOrDefault | 켈렉션에 지정된 인덱스에 있응 요소를 반환하거나, 인덱스가 범위를 벗어나면 기본값을 반환한다. | 해당 사항 없음  |
+| First            | 컬렉션의 첫 번째 요소 또는 특정 조건에 맞는 첫 번째 요소를 반환한다. | 해당 사항 없음  |
+| FirstOrDefault   | 컬렉션의 첫 번째 요소 또는 특정 조건에 맞는 첫 번째 요소를 반환하거나, 이러한 요소가 없으면 기본값을 반환한다. | 해당 사항 없음  |
+| Last             | 컬렉션의 마지막요소 또는 특정 조건에 맞는 마지막 요소를 반환한다. | 해당 사항 없음  |
+| LastOrDefault    | 컬렉션의 마지막 요소 또는 특정 조건에 맞는 마지막 요소를 반환하거나, 이러한 요소가 없으면 기본값을 반환한다. | 해당 사항 없음  |
+| Single           | 컬렉션의 유일한 요소 도는 특정 조건에 맞는 유일한 요소를 반환한다. 반환할 요소가 없거나 두 개 이상 있는 경우 InvalidOperationException을 던진다. | 해당 사항 없음  |
+| SingleOrDefault  | 컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환한다. 반환할 요소가 없으면 기본값을 반환하고, 두개 이상이면 InvalidOperationException을 던진다. | 해당 사항 없음  |
+
+
+
+### 데이터 형식 변환
+
+| 메소드 이름  | 설명                                                         | c# 쿼리 식 구문                                             |
+| ------------ | ------------------------------------------------------------ | ----------------------------------------------------------- |
+| AsEnumerable | IEnumerator<T>로 형식화된 입력을 반환한다.                   | 해당 사항 없음                                              |
+| AsQueryable  | (제네릭)IEnumerable을 (제네릭)IQueryable로 변환한다.         | 해당 사항 없음                                              |
+| Cast         | 컬렉션의 요소를 지정된 형식으로 캐스트한다.                  | 명시적 형식범위를 사용한다. (ex : from string str in words) |
+| OfType       | 지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 필터링한다. | 해당 사항 없음                                              |
+| ToArray      | 컬렉션을 배열로 반환한다. 쿼리를 강제로 실행한다.            | 해당 사항 없음                                              |
+| ToDictionary | 키 선택기 한수에 따라 Dictionary<TKey, TValue>에 요소를 배치한다. 쿼리를 강제로 실행한다. | 해당 사항 없음                                              |
+| ToList       | 컬렉션을 List<T>로 변환한다. 쿼리를 강제로 실행한다.         | 해당 사항 없음                                              |
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConvertingDataType
+{
+    class Plant
+    {
+        public string Name { get; set; }
+    }
+    class CarnivorousPlant : Plant
+    {
+        public string TrapType { get; set; }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Plant[] plants = new Plant[] 
+            {
+            new CarnivorousPlant { Name = "Venus Fly Trap", TrapType = "Snap Trap" },
+            new CarnivorousPlant { Name = "Pitcher Plant", TrapType = "Pitfall Trap" },
+            new CarnivorousPlant { Name = "Sundew", TrapType = "Flypaper Trap" },
+            new CarnivorousPlant { Name = "Waterwheel Plant", TrapType = "Snap Trap" }
+            };
+
+            var query = from CarnivorousPlant cPlant in plants
+                        where cPlant.TrapType == "Snap Trap"
+                        select cPlant;
+
+            foreach (Plant plant in query)
+                Console.WriteLine(plant.Name);
+
+        }
+    }
+}
+/*
+Venus Fly Trap
+Waterwheel Plant
+*/
+```
+
+
+
+### 연결 작업
+
+| 메소드 이름 | 설명                                           | c# 쿼리 식 구문 |
+| ----------- | ---------------------------------------------- | --------------- |
+| Concat      | 두 시퀀스를 연결하여 하나의 시퀀스를 구성한다. | 해당 사항 없음  |
+
+
+
+### 집계 작업
+
+| 메소드 이름 | 설명                                                         | c# 쿼리 식 구문 |
+| ----------- | ------------------------------------------------------------ | --------------- |
+| Aggregate   | 컬렉션 값에 대해 사용자 지정 집계 작업을 수행한다.           | 해당 사항 없음  |
+| Average     | 값 컬렉션의 평균 값을 계산한다.                              | 해당 사항 없음  |
+| Count       | 컬렉션에서 요소(선택적으로 조건자 함수를 충족하는 요소만)개수를 계산한다. | 해당 사항 없음  |
+| LongCount   | 큰 컬렉션에서 요소(선택적으로 조건자 함수를 충족하는 요소만) 개수를 계산한다. | 해당 사항 없음  |
+| Max         | 컬렉션의 최대값을 확인한다.                                  | 해당 사항 없음  |
+| Min         | 컬렉션의 최소값을 확인한다.                                  | 해당 사항 없음  |
+| Sum         | 컬렉션에 있는 값의 합계를 계산한다.                          | 해당 사항 없음  |
+
