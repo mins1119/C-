@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFile", "BinaryFile\Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFile", "TextFile\TextFile.csproj", "{EECC7165-8DCF-47D2-9B69-A9BEC06BAD7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "Serialization\Serialization.csproj", "{0D6B5628-803A-4016-9C2F-9CBA731CB2C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializingCollection", "SerializingCollection\SerializingCollection.csproj", "{10076005-6298-4F02-A36E-A0217ADF611A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{EECC7165-8DCF-47D2-9B69-A9BEC06BAD7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EECC7165-8DCF-47D2-9B69-A9BEC06BAD7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EECC7165-8DCF-47D2-9B69-A9BEC06BAD7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D6B5628-803A-4016-9C2F-9CBA731CB2C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D6B5628-803A-4016-9C2F-9CBA731CB2C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D6B5628-803A-4016-9C2F-9CBA731CB2C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D6B5628-803A-4016-9C2F-9CBA731CB2C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10076005-6298-4F02-A36E-A0217ADF611A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10076005-6298-4F02-A36E-A0217ADF611A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10076005-6298-4F02-A36E-A0217ADF611A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10076005-6298-4F02-A36E-A0217ADF611A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
