@@ -232,3 +232,13 @@ CRL( Common Language Runtime )은 IL( Intermediate Language )로 컴파일할 �
 
 DLR은 CLR위에서 동작하며, 동적언어를 실행할 수 있다. 또한 동적언어의 코드에서 만들어진 객체에 C# 이나 VB와 같은 정적언어의 코드에서 접근할 수 있게 해준다. 즉, C#코드에서 루비나 파이썬코드를 실행하고 돌려볼 수 있다.
 
+
+
+| 클래스        | 설명                                                         |
+| ------------- | ------------------------------------------------------------ |
+| ScriptRuntime | 동적언어를 호스팅하는 시작점.<br />하나의 AppDomian안에 여러개의 ScriptRuntime 인스턴스를 만들수 있다. |
+| ScriptScope   | 기본적으로 네임스페이스를 나타낸다.                          |
+| ScriptEngine  | 스크립트 엔진은 언어의 구문을 나타낸다.<br />코드를 실행하고 ScriptScope와 ScriptSource를 생성하는 다양한 방법을 제공한다. |
+| ScriptSource  | 소스코드를 읽어들이고, 실행하는 메소드를 제공한다.           |
+| CompiledCode  | 컴파일된 코드를 나타낸다.                                    |
+

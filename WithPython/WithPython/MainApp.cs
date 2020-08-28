@@ -1,44 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Microsoft.Scripting;
-using Microsoft.Scripting.Hosting;
-using IronPython.Hosting;
-
-namespace WithPython
+namespace BinaryFile
 {
-    class MainApp
+    class Program
     {
         static void Main(string[] args)
         {
-            ScriptEngine engine = Python.CreateEngine();
-            ScriptScope scope = engine.CreateScope();
-            scope.SetVariable("n", "Alice");
-            scope.SetVariable("s", "Alice in wonderland");
+            BinaryWriter bw = new BinaryWriter(new FileStream("a.dat", FileMode.Create));
 
-            ScriptSource source = engine.CreateScriptSourceFromString(
-                @"
-class NameCard : 
-    name = ''
-    story = ''
+            bw.Write(int.MaxValue);
+            bw.Write("Good Morning");
+            bw.Write(uint.MaxValue);
+            bw.Write("안녕히세요");
+            bw.Write(double.MaxValue);
 
-    def _init_(self,name,story) :
-        self.name = name
-        self.story = story
+            bw.Close();
 
-    def printNameCard(self) : 
-        print self.name + ',' + self.story
+            BinaryReader br = new BinaryReader(new FileStream("a.dat", FileMode.Open));
 
-NameCard(n, s)
-");
+            Console.WriteLine($"File size : {br.BaseStream.Length} bytes");
+            Console.WriteLine($"{br.ReadInt32()}");
+            Console.WriteLine($"{br.ReadString()}");
+            Console.WriteLine($"{br.ReadUInt32()}");
+            Console.WriteLine($"{br.ReadString()}");
+            Console.WriteLine($"{br.ReadDouble()}");
 
-            dynamic result = source.Execute(scope);
-
-            result.printNameCard();
-            Console.WriteLine($"{result.name}, {result.story}");
+            br.Close();
         }
     }
 }
