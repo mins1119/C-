@@ -22,7 +22,7 @@ namespace Serialized
     {
         static void Main(string[] args)
         {
-            Stream ws = new FileStream("a.txt", FileMode.Create);
+            Stream ws = new FileStream("a.dat", FileMode.Create);
             BinaryFormatter serializer = new BinaryFormatter();
 
             List<NameCard> list = new List<NameCard>();
@@ -33,7 +33,7 @@ namespace Serialized
             serializer.Serialize(ws, list);
             ws.Close();
 
-            Stream rs = new FileStream("a.txt", FileMode.Open);
+            Stream rs = new FileStream("a.dat", FileMode.Open);
             BinaryFormatter deserializer = new BinaryFormatter();
 
             List<NameCard> list2;

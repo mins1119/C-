@@ -15,8 +15,8 @@ namespace StreamFile
 
             sw.Write(int.MaxValue);
             sw.Write("Good Morning");
-            sw.Write(uint.MaxValue);
-            sw.Write("안녕하세요");
+            sw.Write(uint.MaxValue+"\r\n");
+            sw.Write("Hello\r\n");
             sw.Write(double.MaxValue);
 
             sw.Close();

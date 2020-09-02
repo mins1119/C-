@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
@@ -27,6 +28,7 @@ namespace UsingControls
             var Fonts = FontFamily.Families;
             foreach (FontFamily font in Fonts)
                 cboFont.Items.Add(font.Name);
+           
 
         }
         void ChangeFont()
@@ -42,6 +44,8 @@ namespace UsingControls
                 style |= FontStyle.Italic;
 
             txtSampleText.Font = new Font((string)cboFont.SelectedItem, 10, style);
+
+            
         }
         void TreeToList()
         {
@@ -64,18 +68,22 @@ namespace UsingControls
         private void cboFont_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeFont();
+            outBox.Text += e.ToString();
         }
         private void chkBold_CheckedChanged(object sender, EventArgs e)
         {
             ChangeFont();
+            outBox.Text += e.ToString();
         }
         private void chkItalic_CheckedChanged(object sender, EventArgs e)
         {
             ChangeFont();
+            outBox.Text += e.ToString();
         }
         private void tbDummy_Scroll(object sender, EventArgs e)
         {
             pgDummy.Value = tbDummy.Value;
+            outBox.Text += e.ToString();
         }
 
         private void btnModal_Click(object sender, EventArgs e)
@@ -91,6 +99,7 @@ namespace UsingControls
         {
             Form frm = new Form();
             frm.Text = "Modaless Form";
+            frm.Text = e.ToString();
             frm.Width = 300;
             frm.Height = 300;
             frm.BackColor = Color.Blue;
@@ -120,19 +129,5 @@ namespace UsingControls
             TreeToList();
         }
 
-        private void eventLog1_EntryWritten(object sender, System.Diagnostics.EntryWrittenEventArgs e)
-        {
-
-        }
-
-        private void eventLog1_EntryWritten_1(object sender, System.Diagnostics.EntryWrittenEventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
     }
 }
