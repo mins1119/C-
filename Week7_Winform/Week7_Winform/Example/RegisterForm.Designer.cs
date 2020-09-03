@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelBack = new System.Windows.Forms.Panel();
+            this.btnRegi = new System.Windows.Forms.Button();
+            this.RegisterPic = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textPw2 = new System.Windows.Forms.TextBox();
             this.textPw = new System.Windows.Forms.TextBox();
@@ -48,23 +50,43 @@
             this.textName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.RegisterPic = new System.Windows.Forms.PictureBox();
             this.panelBack.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegisterPic)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBack
             // 
+            this.panelBack.Controls.Add(this.btnRegi);
+            this.panelBack.Controls.Add(this.RegisterPic);
             this.panelBack.Controls.Add(this.panel2);
             this.panelBack.Controls.Add(this.panel1);
             this.panelBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBack.Location = new System.Drawing.Point(0, 0);
             this.panelBack.Name = "panelBack";
-            this.panelBack.Size = new System.Drawing.Size(504, 431);
+            this.panelBack.Size = new System.Drawing.Size(538, 322);
             this.panelBack.TabIndex = 0;
+            // 
+            // btnRegi
+            // 
+            this.btnRegi.Location = new System.Drawing.Point(376, 251);
+            this.btnRegi.Name = "btnRegi";
+            this.btnRegi.Size = new System.Drawing.Size(139, 35);
+            this.btnRegi.TabIndex = 2;
+            this.btnRegi.Text = "가입";
+            this.btnRegi.UseVisualStyleBackColor = true;
+            this.btnRegi.Click += new System.EventHandler(this.btnRegi_Click);
+            // 
+            // RegisterPic
+            // 
+            this.RegisterPic.Location = new System.Drawing.Point(375, 13);
+            this.RegisterPic.Name = "RegisterPic";
+            this.RegisterPic.Size = new System.Drawing.Size(140, 175);
+            this.RegisterPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RegisterPic.TabIndex = 0;
+            this.RegisterPic.TabStop = false;
+            this.RegisterPic.Click += new System.EventHandler(this.RegisterPic_Click);
             // 
             // panel2
             // 
@@ -85,7 +107,7 @@
             this.panel2.Controls.Add(this.textName);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(323, 347);
+            this.panel2.Size = new System.Drawing.Size(323, 290);
             this.panel2.TabIndex = 1;
             // 
             // textPw2
@@ -165,13 +187,13 @@
             this.fbtnMale.Name = "fbtnMale";
             this.fbtnMale.Size = new System.Drawing.Size(51, 16);
             this.fbtnMale.TabIndex = 6;
-            this.fbtnMale.TabStop = true;
             this.fbtnMale.Text = "Male";
             this.fbtnMale.UseVisualStyleBackColor = true;
             // 
             // rbtnFemale
             // 
             this.rbtnFemale.AutoSize = true;
+            this.rbtnFemale.Checked = true;
             this.rbtnFemale.Location = new System.Drawing.Point(115, 56);
             this.rbtnFemale.Name = "rbtnFemale";
             this.rbtnFemale.Size = new System.Drawing.Size(65, 16);
@@ -229,8 +251,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.RegisterPic);
-            this.panel1.Location = new System.Drawing.Point(352, 12);
+            this.panel1.Location = new System.Drawing.Point(375, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(140, 179);
             this.panel1.TabIndex = 0;
@@ -239,31 +260,21 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // RegisterPic
-            // 
-            this.RegisterPic.Location = new System.Drawing.Point(0, 1);
-            this.RegisterPic.Name = "RegisterPic";
-            this.RegisterPic.Size = new System.Drawing.Size(140, 175);
-            this.RegisterPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.RegisterPic.TabIndex = 0;
-            this.RegisterPic.TabStop = false;
-            this.RegisterPic.Click += new System.EventHandler(this.RegisterPic_Click);
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 431);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(538, 322);
             this.Controls.Add(this.panelBack);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.panelBack.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RegisterPic)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegisterPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +301,6 @@
         private System.Windows.Forms.TextBox textPw;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox RegisterPic;
+        private System.Windows.Forms.Button btnRegi;
     }
 }

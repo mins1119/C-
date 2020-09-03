@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Example\PeopleListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Example\PeopleListForm.Designer.cs">
+      <DependentUpon>PeopleListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Example\Register.cs" />
     <Compile Include="Example\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Example\PeopleListForm.resx">
+      <DependentUpon>PeopleListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Example\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
