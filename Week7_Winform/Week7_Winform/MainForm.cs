@@ -13,11 +13,12 @@ namespace Week7_Winform
 {
     public partial class MainForm : Form
     {
+        public string MouseEventValue { get; set; }
         Random random = new Random(37);
         public MainForm()
         {
             InitializeComponent();
-
+            MouseEventValue = "MouseClickEvnt";
             lvDummy.Columns.Add("Name");
             lvDummy.Columns.Add("Depth");
         }
@@ -167,90 +168,6 @@ namespace Week7_Winform
         #endregion
 
 
-        #region : 파일 복사
-        private async Task<long> CopyAsync(string FromPath, string ToPath)
-        {
-            btnSyncCopy.Enabled = false;
-            long totalCopied = 0;
-
-            using(FileStream fromStream = new FileStream(FromPath,FileMode.Open))
-            {
-                using (FileStream toStream = new FileStream(ToPath, FileMode.Create))
-                {
-                    byte[] buffer = new byte[1024 * 1024];
-                    int nRead = 0;
-                    while((nRead = await fromStream.ReadAsync(buffer,0,buffer.Length)) != 0)
-                    {
-                        await toStream.WriteAsync(buffer, 0, nRead);
-                        totalCopied += nRead;
-
-                        pbCopy.Value = (int)(((double)totalCopied / (double)fromStream.Length) * pbCopy.Maximum);
-
-                    }
-                }
-            }
-            btnSyncCopy.Enabled = true;
-            return totalCopied;
-        }
-
-        private long CopySync(string FromPath, string ToPath)
-        {
-            btnAsyncCopy.Enabled = false;
-            long totalCopied = 0;
-
-            using(FileStream fromStream = new FileStream(FromPath, FileMode.Open))
-            {
-                using (FileStream toStream = new FileStream(ToPath, FileMode.Create))
-                {
-                    byte[] buffer = new byte[1024 * 1024];
-                    int nRead = 0;
-                    while ((nRead = fromStream.Read(buffer, 0, buffer.Length)) != 0)
-                    {
-                        toStream.Write(buffer, 0, nRead);
-                        totalCopied += nRead;
-                        pbCopy.Value = (int)(((double)totalCopied / (double)fromStream.Length) * pbCopy.Maximum);
-                    }
-                }
-            }
-            btnAsyncCopy.Enabled = true;
-            return totalCopied;
-        }
-
-        private void btnFindSource_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dlg = new OpenFileDialog();
-            if(dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                txtSource.Text = dlg.FileName;
-            }
-        }
-
-        private void btnFindTarget_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog dlg = new SaveFileDialog();
-            if(dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                txtTarget.Text = dlg.FileName;
-            }
-        }
-
-        private async void btnAsyncCopy_Click(object sender, EventArgs e)
-        {
-            long totalCopied = await CopyAsync(txtSource.Text, txtTarget.Text);
-        }
-
-        private void btnSyncCopy_Click(object sender, EventArgs e)
-        {
-            long totalCopied = CopySync(txtSource.Text, txtTarget.Text);
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("UI테스트 반응 성공");
-        }
-
-        #endregion
-
         #region : 트리뷰 & 리스트뷰
         void TreeToList()
         {
@@ -287,6 +204,8 @@ namespace Week7_Winform
         }
         #endregion
 
+        #region : Control & View
+
         private void btnColor_Click(object sender, EventArgs e)
         {
             if (colorDialog.ShowDialog() != DialogResult.Cancel)
@@ -306,12 +225,17 @@ namespace Week7_Winform
             if (dr == DialogResult.OK)
             {
                 MessageBox.Show("선택경로 : " + folderBrowserDialog.SelectedPath);
+                textLog.AppendText($"선택경로 :{folderBrowserDialog.SelectedPath}\r\n");
             }
         }
 
         private void btnMouseEvent_Click(object sender, EventArgs e)
         {
-
+            MouseForm mouseForm = new MouseForm();
+            mouseForm.Owner = this;
+            mouseForm.Show();
+            textLog.AppendText(MouseEventValue);
         }
+        #endregion
     }
 }

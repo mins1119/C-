@@ -28,10 +28,10 @@ namespace Synchronize
             int loopCount = LOOP_COUNT;
             while(loopCount-- > 0)
             {
-                lock (thisLock)
-                {
+                //lock (thisLock)
+                //{
                     count++;
-                }
+                //}
                 Thread.Sleep(1);
             }
         }
@@ -40,10 +40,10 @@ namespace Synchronize
             int loopCount = LOOP_COUNT;
             while(loopCount-- > 0)
             {
-                lock (thisLock)
-                {
+                //lock (thisLock)
+                //{
                     count--;
-                }
+                //}
                 Thread.Sleep(1);
             }
         }
