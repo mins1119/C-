@@ -412,7 +412,7 @@ Stopped, Aborted : 272
 
 lock 키워드로 감싸기만해도 일반 코드를 크리티컬 섹션으로 바꿀 수 있다.
 
-
+lock 키워드의 매개변수는 참조형 - public 키워드를 통해 외부접근이 가능한 lock(this), lock(typeof(SoneClass)), lock(obj.GetType()), lock("abc") 는 사용금지
 
 ```c#
 class Counter
