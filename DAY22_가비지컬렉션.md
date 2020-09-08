@@ -4,9 +4,9 @@
 
 CLR은 자동 메모리 관리( Automatic Memory Management ) 기능을 제공한다. 
 
-가비지 컬렉션 (Garbage Collection) : 쓰레기 수거'라는 뜻으로  더 이상 사용하지 않는 객체를 정리하는 것을 말한다.
+**가비지 컬렉션 (Garbage Collection) :** 쓰레기 수거'라는 뜻으로  더 이상 사용하지 않는 객체를 정리하는 것을 말한다.
 
-가비지 컬렉터 (Garbage Collector) : 가비지 컬렉션을 담당하며, 객체 중에 쓰레기인 것과 아닌 것을 완벽하게 분리해서 쓰레기만 수거해간다.
+**가비지 컬렉터 (Garbage Collector) :** 가비지 컬렉션을 담당하며, 객체 중에 쓰레기인 것과 아닌 것을 완벽하게 분리해서 쓰레기만 수거해간다.
 
 가비지 컬렉터 역시 소프트웨어이기 때문에 CPU나 메모리와 같은 컴퓨팅 자원을 소모한다. 때문에 프로그램의 성능을 끌어올리기 위해 가비지 컬렉터가 자원을 최소한으로 사용하게 해야 한다.
 
@@ -22,11 +22,11 @@ CLR은 자동 메모리 관리( Automatic Memory Management ) 기능을 제공�
 
 
 
+> **메모리 누수 (memory leak)**
+>
+> 네이티브응용 프로그램에서는 할당과 해제의 쌍을 맞춰야 한다. 할당만 하고 해제를 잊으면 해제되지 않은 메모리가 누적되아 메모리 부족 현상이 발생한다. 이를 메모리 누수 현상이라 한다.
+
 ## 메모리 할당 방법
-
-
-
-
 
 관리되는 힙을 위한 메모리 공간 확보
 
@@ -43,6 +43,42 @@ CLR은 자동 메모리 관리( Automatic Memory Management ) 기능을 제공�
 
 
 
+```c#
+static void Main(string[] args)
+{
+    object a = new object();
+    object b = new object();
+    object c = new object();
+
+    DoMethod();
+    GC.Collect();
+}
+private static void DoMethod()
+{
+    object d = new object();
+    object e = new object();
+
+    object f = new object();
+    object g = new object();
+
+    d = null;
+    e = null;
+
+    GC.Collect();
+
+    object h = new object();
+    object i = new object();
+
+    object j = new object();
+    object k = new object();
+
+    j = null;
+    k = null;
+
+    GC.Collect();
+}
+```
+
 
 
 ## 세대별 가비지 컬렉션
@@ -57,9 +93,33 @@ CLR의 메모리는 구역을 나누어 메모리에서 빨리 사라질 객체�
 
 2세대 : 오랫동안 살아남을 것으로 예상되는 객체 - 수 차례 가비지 컬렉션을 겪고도 살아남은 객체
 
+```c#
+static void Main(string[] args)
+{
+    object a = new object();
+    Console.WriteLine(GC.GetGeneration(a));	//0
 
+
+    GC.Collect();
+    Console.WriteLine(GC.GetGeneration(a));	//1
+
+    GC.Collect();
+    Console.WriteLine(GC.GetGeneration(a));	//2
+
+    GC.Collect();
+    Console.WriteLine(GC.GetGeneration(a));	//2
+
+}
+
+```
+
+Main 메소드 내에서 힙에 object 객체를 생성하고 스택의 지역변수 a는 object의 메모리 주소를 가리킨다. 지역변수는 명시적으로는 null을 대입하지 않는 한 메소드가 끝날때까지 유효하므로 Main메소드가 끝날때까지 살아있게 된다. GC호출 이후부터는 승격됨을 볼 수 있다.
 
 ### 전체 가비지 컬렉션 ( Full Garbage Collection )
+
+```c#
+GC.Collect(int generation)
+```
 
 2세대 가비지 컬렉션을 말한다. 2세대 가비지 컬렉션이 시작되면 1세대와 0세대에 대해서도 가비지 컬렉션을 수행하기 때문이다.
 

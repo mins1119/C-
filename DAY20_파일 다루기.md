@@ -1,5 +1,9 @@
 # 파일 다루기			20.08.25
 
+------
+
+--------
+
 ## 파일 정보와 디렉토리 정보 다루기
 
 > 파일 ( File ) : 컴퓨터 저장 매체에 기록되는 데이터의 묶음
@@ -18,6 +22,8 @@
 하나의 파일에 대해 한 두가지의 작업을 할 때는 File클래스의 정적 메소드를 이용하고, 하나의 파일에 대해 여러가지 메소드를 이용할 때는 FileInfo클래스의 인스턴스 메소드를 사용하는 편이다.
 
 
+
+------------
 
 ### 각 클래스들의 주요 메소드와 프로퍼티
 
@@ -185,6 +191,10 @@ namespace Touch
 
 
 
+------
+
+---------
+
 ## 파일의 입력과 출력
 
 **스트림 ( Stream )**
@@ -205,6 +215,10 @@ namespace Touch
 
 
 
+--------
+
+----------
+
 ##  System.IO.Stream
 
 - Stream클래스는 그 자체로 입력 스트림, 출력 스트림의 역할을 모두 할 수 있으며 순차 접근 방식과 임의 접근 방식 모두를 지원한다.
@@ -223,6 +237,8 @@ namespace Touch
 
 
 
+-------
+
 ### **인스턴스 생성**
 
 ```c#
@@ -237,6 +253,8 @@ Stream stream4 = new FileStream("d.dat", FileMode.Truncate);
 // 덧붙이기 모드로 열기
 Stream stream5 = new FileStream("e.dat", FileMode.Append);
 ```
+
+---------
 
 ### **파일 쓰기**
 
@@ -264,6 +282,8 @@ outStream.Write(wBytes, 0, wBytes.Length);
 // 4. 파일 스트림 닫기
 outStream.Close();
 ```
+
+---------
 
 ### 데이터 읽어오기
 
@@ -344,7 +364,7 @@ Read Data     : 0x123456789ABCDEF0
 */
 ```
 
-
+----------
 
 ### Position 프로퍼티
 
@@ -406,7 +426,9 @@ Position : 9
 /*
 ```
 
- 
+
+
+------
 
 ### 이진 데이터 처리를 위한 BinaryWriter / BinaryReader
 
@@ -469,6 +491,8 @@ Good Morning
 
 
 
+------
+
 ### 텍스트 파일 처리를 위한 StreamWriter / StreamReader
 
 ```c#
@@ -518,6 +542,10 @@ Good Morning
 
 
 
+-----
+
+------
+
 ## 직렬화
 
 BinaeyReader/writer와 StreamWriter/Reader는 기본 데이터 형식을 지원하며, 직접 정의한 클래스나 구조체 같은 복합데이터 형식은 지원하지 않는다.
@@ -525,6 +553,8 @@ BinaeyReader/writer와 StreamWriter/Reader는 기본 데이터 형식을 지원�
 복합데이터 형식을 쉽게 스트림에 읽고 쓰게 하기 위해 직렬화( Serialization ) 메커니즘을 제공한다.
 
 
+
+----------
 
 ### **직렬화( Serialization )**
 
@@ -564,6 +594,8 @@ re.Close();
 ```
 
 
+
+-------
 
 ### 직렬화 제외
 

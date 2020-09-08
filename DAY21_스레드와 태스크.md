@@ -39,11 +39,15 @@
 
 
 
+----
+
+-------
+
 # 스레드
 
 .NET 프레임워크에서는 스레드를 나타내는 클래스로 System.Threading.Thread를 제공한다.
 
-
+---------
 
 ## 스레드 시작하기
 
@@ -130,6 +134,8 @@ Waiting until thread stops..
 Finished
 */
 ```
+
+--------
 
 ## 스레드 종료
 
@@ -316,6 +322,8 @@ Finished
 
 
 
+--------
+
 ## 스레드의 상태변화
 
 스레드의 상태는 TreadState 열거형에 정의되어있다.
@@ -391,6 +399,10 @@ Stopped, Aborted : 272
 | Suspended        | 64     | 001000000 |
 | AbortRequested   | 128    | 010000000 |
 | Aborted          | 256    | 100000000 |
+
+
+
+--------
 
 ## 동기화( Synchoronization)
 
@@ -805,7 +817,9 @@ namespace WaitPulse
 
 
 
+-----
 
+----
 
 # Task 와 Task< TResult >, Parallel
 
@@ -828,6 +842,8 @@ namespace WaitPulse
 > Thread클래스는 여러개의 작업을 ( 나누지 않고 ) 각각 처리해야 하는 코드에 적합하다.
 
 
+
+----------
 
 ## System.Threading.Tasks.Task
 
@@ -912,6 +928,8 @@ TaskID : 3, ThreadID : System.Threading.Thread, a.txt was copied to a.txt.copy3
 
 
 
+
+------
 
 ## Task< TResult > 클래스
 
@@ -1032,6 +1050,8 @@ Ellapsed time : 00:00:00.0070024
 
 
 
+-----------
+
 ## Parallel 클래스
 
 ```c#
@@ -1094,6 +1114,8 @@ Ellapsed Time : 00:00:00.0120020
 ```
 
 
+
+---------
 
 ## async 한정자와 await 연산자
 

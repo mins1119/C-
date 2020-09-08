@@ -6,6 +6,10 @@ WYSIWYG ( What You See Is What You Get ) 개발 방식으로, 프로그래머가
 
 
 
+--------
+
+-------------
+
 ## **Winfrom 클래스를 이용한 윈도우 생성 절차**
 
 1. System.Windows.Forms.Form 클래스에서 파생된 윈도우 폼 클래스를 선언한다.
@@ -34,6 +38,10 @@ namespace Winform
 ```
 
 
+
+--------
+
+------------------
 
 ## Application 클래스
 
@@ -502,6 +510,10 @@ namespace FormAndControl
 ```
 
 
+
+----------
+
+-------------
 
 ## 폼 디자이너를 이용한 Winform  UI 구성
 
