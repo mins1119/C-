@@ -6,44 +6,45 @@ namespace WaitPulse
 {
     class Counter
     {
-        const int LOOP_COUNT = 1000;
-        readonly object thisLock;
-        bool lockedCount = false;
+        const int LOOP_COUNT = 100; //100번 반복하겠다
+        readonly object thisLock; // 열쇠객체
+        bool lockedCount = false; //조건, 이걸로 increase 아니면 decrease 하나밖에 못돔
 
-        private int count;
-        public int Count
+        private int count; //더해지고 빼질 카운트
+        public int Count //프로퍼티
         {
             get { return count; }
         }
         public Counter()
         {
-            thisLock = new object();
-            count = 0;
+            thisLock = new object(); //열쇠 초기화
+            count = 0;      //카운트 초기화
         }
         public void Increase()
         {
-            int loopCount = LOOP_COUNT;
+            int loopCount = LOOP_COUNT; //increase의 지역변수 어쨋든 100번을돌겠다.
             while (loopCount-- > 0)
             {
-                lock (thisLock)
+                lock (thisLock) //increase든 decrease든 하나의 스레드밖에 실행을 못함
                 {
-                    while (count > 0 || lockedCount == true)
+                    while (count > 0 || lockedCount == true) //먼저 lockedCount가 false이므로 wait안됨,
                         Monitor.Wait(thisLock);
 
-                    lockedCount = true;
+                    lockedCount = true; 
                     count++;
                     lockedCount = false;
 
                     Monitor.Pulse(thisLock);
+                    Console.WriteLine($"increase : {count}");
                 }
             }
         }
         public void Decrease()
         {
-            int loopCount = LOOP_COUNT;
+            int loopCount = LOOP_COUNT; //decrese의 지역변수 어쨋든 100번을돌겠다.
             while (loopCount-- > 0)
             {
-                lock (thisLock)
+                lock (thisLock)  //increase든 decrease든 하나의 스레드밖에 실행을 못함
                 {
                     while (count < 0 || lockedCount == true)
                         Monitor.Wait(thisLock);
@@ -53,6 +54,7 @@ namespace WaitPulse
                     lockedCount = false;
 
                     Monitor.Pulse(thisLock);
+                    Console.WriteLine($"decrease : {count}");
                 }
             }
         }

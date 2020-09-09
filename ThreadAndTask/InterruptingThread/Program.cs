@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -18,8 +19,9 @@ namespace InterruptingThread
         {
             try
             {
-                Console.WriteLine("Runnung thread isn't gonna be interrupted");
-                Thread.SpinWait(1000000000);
+                Console.WriteLine("Runnung thread isn't gonna be interrupted");//
+                Thread.SpinWait(1000000);       //
+                //Thread.Sleep(1000);
                 while (count > 0)
                 {
                     Console.WriteLine($"{count--} left");
@@ -30,7 +32,7 @@ namespace InterruptingThread
             }
             catch (ThreadInterruptedException e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine("\n\n\n\n" +e);
             }
             finally
             {
@@ -42,22 +44,27 @@ namespace InterruptingThread
     {
         static void Main(string[] args)
         {
+            Stopwatch stopwatch = Stopwatch.StartNew();
             SideTask task = new SideTask(100);
             Thread t1 = new Thread(new ThreadStart(task.KeepAlive));
             t1.IsBackground = false;
 
+            Console.WriteLine("Start() 호출 : {0}", stopwatch.Elapsed.TotalMilliseconds);
             Console.WriteLine("Starting Thread...");
             t1.Start();
 
+            Console.WriteLine("sleep() 호출 : {0}", stopwatch.Elapsed.TotalMilliseconds);
             Thread.Sleep(100);
-
+            
             Console.WriteLine("Interrupting thread...");
+            Console.WriteLine("Interrupt() 호출 : {0} ", stopwatch.Elapsed.TotalMilliseconds);
             t1.Interrupt();
 
             Console.WriteLine("Waiting until thresd stops...");
             t1.Join();
 
             Console.WriteLine("Finished");
+            Console.WriteLine("끝남: {0} ", stopwatch.Elapsed.TotalMilliseconds);
         }
     }
 }

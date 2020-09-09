@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Async\Async.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncFileIO", "AsncFileIO\AsyncFileIO.csproj", "{4BA43054-17FB-4EE6-8797-A04A4D2A7998}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinWait", "SpinWait\SpinWait.csproj", "{ADBD7CCF-6D5F-43AC-87B8-4E58067B9A73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{4BA43054-17FB-4EE6-8797-A04A4D2A7998}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BA43054-17FB-4EE6-8797-A04A4D2A7998}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BA43054-17FB-4EE6-8797-A04A4D2A7998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADBD7CCF-6D5F-43AC-87B8-4E58067B9A73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBD7CCF-6D5F-43AC-87B8-4E58067B9A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBD7CCF-6D5F-43AC-87B8-4E58067B9A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBD7CCF-6D5F-43AC-87B8-4E58067B9A73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
