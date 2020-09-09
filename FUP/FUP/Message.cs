@@ -8,7 +8,7 @@
         public const uint FILE_SEND_RES = 0x04;
 
         public const byte NOT_FRAGMENTED = 0x00;
-        public const byte FRAGMENTED = 001;
+        public const byte FRAGMENTED = 0x01;
 
         public const byte NOT_LASTMSG = 0x00;
         public const byte LASTMSG = 0x01;
@@ -19,11 +19,13 @@
         public const byte FAIL = 0x00;
         public const byte SUCCESS = 0x01;
     }
+
     public interface ISerializable
     {
         byte[] GetBytes();
         int GetSize();
     }
+
     public class Message : ISerializable
     {
         public Header Header { get; set; }
@@ -34,7 +36,6 @@
             byte[] bytes = new byte[GetSize()];
 
             Header.GetBytes().CopyTo(bytes, 0);
-
             Body.GetBytes().CopyTo(bytes, Header.GetSize());
 
             return bytes;
@@ -44,6 +45,5 @@
         {
             return Header.GetSize() + Body.GetSize();
         }
-
     }
 }

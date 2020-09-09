@@ -5,7 +5,7 @@ using System.Text;
 
 namespace FUP
 {
-    public class BodyRequest: ISerializable
+    public class BodyRequest : ISerializable
     {
         public long FILESIZE;
         public byte[] FILENAME;
@@ -27,11 +27,13 @@ namespace FUP
 
             return bytes;
         }
+
         public int GetSize()
         {
             return sizeof(long) + FILENAME.Length;
         }
     }
+
     public class BodyResponse : ISerializable
     {
         public uint MSGID;
@@ -42,6 +44,7 @@ namespace FUP
             MSGID = BitConverter.ToUInt32(bytes, 0);
             RESPONSE = bytes[4];
         }
+
         public byte[] GetBytes()
         {
             byte[] bytes = new byte[GetSize()];
@@ -51,11 +54,13 @@ namespace FUP
 
             return bytes;
         }
+
         public int GetSize()
         {
             return sizeof(uint) + sizeof(byte);
         }
     }
+
     public class BodyData : ISerializable
     {
         public byte[] DATA;
@@ -70,15 +75,18 @@ namespace FUP
         {
             return DATA;
         }
+
         public int GetSize()
         {
             return DATA.Length;
         }
     }
+
     public class BodyResult : ISerializable
     {
         public uint MSGID;
         public byte RESULT;
+
         public BodyResult() { }
         public BodyResult(byte[] bytes)
         {
@@ -94,6 +102,7 @@ namespace FUP
 
             return bytes;
         }
+
         public int GetSize()
         {
             return sizeof(uint) + sizeof(byte);

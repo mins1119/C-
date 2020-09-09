@@ -17,10 +17,11 @@ namespace FUP
             MSGID = BitConverter.ToUInt32(bytes, 0);
             MSGTYPE = BitConverter.ToUInt32(bytes, 4);
             BODYLEN = BitConverter.ToUInt32(bytes, 8);
-            FRAGMENTED= bytes[12];
-            LASTMSG= bytes[13];
+            FRAGMENTED = bytes[12];
+            LASTMSG = bytes[13];
             SEQ = BitConverter.ToUInt16(bytes, 14);
         }
+
         public byte[] GetBytes()
         {
             byte[] bytes = new byte[16];
@@ -29,7 +30,10 @@ namespace FUP
             Array.Copy(temp, 0, bytes, 0, temp.Length);
 
             temp = BitConverter.GetBytes(MSGTYPE);
-            Array.Copy(temp,0,bytes,8,temp.Length);
+            Array.Copy(temp, 0, bytes, 4, temp.Length);
+
+            temp = BitConverter.GetBytes(BODYLEN);
+            Array.Copy(temp, 0, bytes, 8, temp.Length);
 
             bytes[12] = FRAGMENTED;
             bytes[13] = LASTMSG;
@@ -39,6 +43,7 @@ namespace FUP
 
             return bytes;
         }
+
         public int GetSize()
         {
             return 16;
