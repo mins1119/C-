@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncFileIO", "AsncFileIO\A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinWait", "SpinWait\SpinWait.csproj", "{ADBD7CCF-6D5F-43AC-87B8-4E58067B9A73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbortInterruptTest", "AbortInterruptTest\AbortInterruptTest.csproj", "{DFBA46EC-A24A-4A69-8098-6A7757B85853}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{ADBD7CCF-6D5F-43AC-87B8-4E58067B9A73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADBD7CCF-6D5F-43AC-87B8-4E58067B9A73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADBD7CCF-6D5F-43AC-87B8-4E58067B9A73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFBA46EC-A24A-4A69-8098-6A7757B85853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFBA46EC-A24A-4A69-8098-6A7757B85853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFBA46EC-A24A-4A69-8098-6A7757B85853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFBA46EC-A24A-4A69-8098-6A7757B85853}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

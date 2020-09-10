@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-
-namespace InterruptingThread
+namespace AbortInterruptTest
 {
     class SideTask
     {
@@ -19,20 +14,33 @@ namespace InterruptingThread
         {
             try
             {
-                Console.WriteLine("Runnung thread isn't gonna be interrupted");//
-                Thread.SpinWait(1000000);       //
+                Stopwatch stopwatch = Stopwatch.StartNew();
+
+                Console.WriteLine("try문 Spinwait(1000000)");
+                Thread.SpinWait(1000000);   //interrupt
+
+                //Console.WriteLine("try문 Sleep(1000)");
                 //Thread.Sleep(1000);
+
+                Console.WriteLine("끝남: {0} ", stopwatch.Elapsed.TotalMilliseconds);
                 while (count > 0)
                 {
                     Console.WriteLine($"{count--} left");
-                    Console.WriteLine("Entering into WaitJoinSleep State..");
                     Thread.Sleep(10);
                 }
                 Console.WriteLine("Count : 0");
             }
-            catch (ThreadInterruptedException e)
+            catch (ThreadAbortException e)
             {
-                Console.WriteLine("\n\n\n\n" +e);
+                Console.WriteLine("\n\n\n\n" + e);
+            }
+            catch(ThreadInterruptedException e)
+            {
+                Console.WriteLine("\n\n\n\n" + e);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
             }
             finally
             {
@@ -48,31 +56,31 @@ namespace InterruptingThread
         }
         static void Main(string[] args)
         {
-            Stopwatch stopwatch = Stopwatch.StartNew();
             SideTask task = new SideTask(100);
             Thread t1 = new Thread(new ThreadStart(task.KeepAlive));
             t1.IsBackground = false;
 
-            Console.WriteLine("Start() 호출 : {0}", stopwatch.Elapsed.TotalMilliseconds);
             Console.WriteLine("Starting Thread...");
             t1.Start();
             printThreadState(t1.ThreadState);
 
-            Console.WriteLine("sleep() 호출 : {0}", stopwatch.Elapsed.TotalMilliseconds);
             Thread.Sleep(100);
             printThreadState(t1.ThreadState);
 
+            //Console.WriteLine("Aborting thread...");
+            //t1.Abort();
+            //printThreadState(t1.ThreadState);
+
+
             Console.WriteLine("Interrupting thread...");
-            Console.WriteLine("Interrupt() 호출 : {0} ", stopwatch.Elapsed.TotalMilliseconds);
             t1.Interrupt();
             printThreadState(t1.ThreadState);
 
-            Console.WriteLine("Waiting until thresd stops...");
-            t1.Join();
+            Console.WriteLine("Waiting until thread stops...");
             printThreadState(t1.ThreadState);
+            t1.Join();
 
             Console.WriteLine("Finished");
-            Console.WriteLine("끝남: {0} ", stopwatch.Elapsed.TotalMilliseconds);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace WaitPulse
 {
     class Counter
     {
-        const int LOOP_COUNT = 100; //100번 반복하겠다
+        const int LOOP_COUNT = 1000; //100번 반복하겠다
         readonly object thisLock; // 열쇠객체
         bool lockedCount = false; //조건, 이걸로 increase 아니면 decrease 하나밖에 못돔
 
@@ -27,14 +27,15 @@ namespace WaitPulse
             {
                 lock (thisLock) //increase든 decrease든 하나의 스레드밖에 실행을 못함
                 {
-                    while (count > 0 || lockedCount == true) //먼저 lockedCount가 false이므로 wait안됨,
+                    while (count > 0 || lockedCount == true)
                         Monitor.Wait(thisLock);
-
+                    
                     lockedCount = true; 
                     count++;
                     lockedCount = false;
 
                     Monitor.Pulse(thisLock);
+                  
                     Console.WriteLine($"increase : {count}");
                 }
             }
@@ -54,11 +55,11 @@ namespace WaitPulse
                     lockedCount = false;
 
                     Monitor.Pulse(thisLock);
+                    
                     Console.WriteLine($"decrease : {count}");
                 }
             }
         }
-
     }
     class Program
     {
