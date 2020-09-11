@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpinWait", "SpinWait\SpinWa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbortInterruptTest", "AbortInterruptTest\AbortInterruptTest.csproj", "{DFBA46EC-A24A-4A69-8098-6A7757B85853}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaitPulseTest", "WaitPulseTest\WaitPulseTest.csproj", "{216B77B1-4137-4FA3-A1CC-30DE5542FFA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{DFBA46EC-A24A-4A69-8098-6A7757B85853}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFBA46EC-A24A-4A69-8098-6A7757B85853}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFBA46EC-A24A-4A69-8098-6A7757B85853}.Release|Any CPU.Build.0 = Release|Any CPU
+		{216B77B1-4137-4FA3-A1CC-30DE5542FFA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{216B77B1-4137-4FA3-A1CC-30DE5542FFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{216B77B1-4137-4FA3-A1CC-30DE5542FFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{216B77B1-4137-4FA3-A1CC-30DE5542FFA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

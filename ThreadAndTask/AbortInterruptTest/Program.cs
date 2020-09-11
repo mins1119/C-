@@ -16,11 +16,11 @@ namespace AbortInterruptTest
             {
                 Stopwatch stopwatch = Stopwatch.StartNew();
 
-                Console.WriteLine("try문 Spinwait(1000000)");
-                Thread.SpinWait(1000000);   //interrupt
+                //Console.WriteLine("try문 Spinwait(1000000)");
+                //Thread.SpinWait(1000000);   //interrupt
 
-                //Console.WriteLine("try문 Sleep(1000)");
-                //Thread.Sleep(1000);
+                Console.WriteLine("try문 Sleep(1000)");
+                Thread.Sleep(1000000);
 
                 Console.WriteLine("끝남: {0} ", stopwatch.Elapsed.TotalMilliseconds);
                 while (count > 0)
@@ -64,13 +64,13 @@ namespace AbortInterruptTest
             t1.Start();
             printThreadState(t1.ThreadState);
 
-            Thread.Sleep(100);
+            Thread.Sleep(1000);
+            //Thread.SpinWait(1000000);
             printThreadState(t1.ThreadState);
 
             //Console.WriteLine("Aborting thread...");
             //t1.Abort();
             //printThreadState(t1.ThreadState);
-
 
             Console.WriteLine("Interrupting thread...");
             t1.Interrupt();

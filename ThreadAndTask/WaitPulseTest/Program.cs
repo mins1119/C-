@@ -2,11 +2,11 @@
 using System.Net.Http.Headers;
 using System.Threading;
 
-namespace WaitPulse
+namespace WaitPulseTest
 {
     class Counter
     {
-        const int LOOP_COUNT = 1000; //100번 반복하겠다
+        const int LOOP_COUNT = 10000; //100번 반복하겠다
         readonly object thisLock; // 열쇠객체
         bool lockedCount = false; //조건, 이걸로 increase 아니면 decrease 하나밖에 못돔
 
@@ -27,15 +27,7 @@ namespace WaitPulse
             {
                 lock (thisLock) //increase든 decrease든 하나의 스레드밖에 실행을 못함
                 {
-                    while (count > 0 || lockedCount == true)
-                        Monitor.Wait(thisLock);
-                    
-                    lockedCount = true; 
                     count++;
-                    lockedCount = false;
-
-                    Monitor.Pulse(thisLock);
-                  
                     Console.WriteLine($"increase : {count}");
                 }
             }
@@ -47,15 +39,10 @@ namespace WaitPulse
             {
                 lock (thisLock)  //increase든 decrease든 하나의 스레드밖에 실행을 못함
                 {
-                    while (count < 0 || lockedCount == true)
-                        Monitor.Wait(thisLock);
-
-                    lockedCount = true;
+                  
                     count--;
-                    lockedCount = false;
-
-                    Monitor.Pulse(thisLock);
                     
+
                     Console.WriteLine($"decrease : {count}");
                 }
             }
@@ -76,7 +63,7 @@ namespace WaitPulse
 
 
             incThread.Start();
-            decThread.Start();
+            decThread.Start(); 
             incThread1.Start();
             decThread1.Start();
             incThread2.Start();

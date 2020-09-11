@@ -45,7 +45,7 @@ namespace EchoClient
                 string responseData = "";
 
                 int bytes = stream.Read(data, 0, data.Length);
-                responseData = Encoding.Default.GetString(data, 0, bytes);
+                responseData = Encoding.Default.GetString(data, 0, data.Length);
                 Console.WriteLine("수신 : {0}", responseData);
 
                 stream.Close();
