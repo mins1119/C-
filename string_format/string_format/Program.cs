@@ -11,36 +11,24 @@ namespace string_format
     {
         static void Main(string[] args)
         {
-            StreamReader sr = new StreamReader(new FileStream("tabledata2.txt", FileMode.Open));
-            StreamWriter sw = new StreamWriter(new FileStream("table2.txt", FileMode.Create));
+            StreamReader sr = new StreamReader(new FileStream("modFunc.txt", FileMode.Open));
+            StreamWriter sw = new StreamWriter(new FileStream("modFunc2.txt", FileMode.Create));
 
             while (sr.EndOfStream == false)
             {
                 string txt = sr.ReadLine();
                 
-                if(txt.Contains("g_sTableName"))
-                {
-                    Console.WriteLine(txt);
-                    string name = txt.Substring(txt.IndexOf("=") + 1);
-                    sw.WriteLine("{"+ name + ",");
-                    sw.WriteLine("new List<DBFieldInfo>");
-                    sw.WriteLine("{");
+                if(txt.StartsWith("Public Sub"))
+                { 
+                    sw.WriteLine(txt);
                 }
-                if (txt.Contains("Dbary"))
+                if (txt.StartsWith("g_sTableName"))
                 {
-                    if (txt[10] == '0') {
-                        sw.Write("new DBFieldInfo(" + txt.Substring(txt.IndexOf("=")+2) + ",");
-                    }
-                    if (txt[10] == '1')
-                    {
-                        sw.WriteLine(txt.Substring(txt.IndexOf("=")+1) + "),");
-                    }
+                        sw.WriteLine("UpdateTableByTableName(uow," + txt.Substring(txt.IndexOf("=")+2) + ");");
                 }
-
-                if (txt.Contains("Fs_CheckDB Dbary"))
+                if (txt.StartsWith("End Sub"))
                 {
-                    sw.WriteLine("}");
-                    sw.WriteLine("},");
+                    sw.WriteLine("\n\n");
                 }
             }
             sr.Close();

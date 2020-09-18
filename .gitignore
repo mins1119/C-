@@ -334,3 +334,5 @@ ASALocalRun/
 .mfractor/
 
 /강의 참고.md
+*.pptx
+*.txt
